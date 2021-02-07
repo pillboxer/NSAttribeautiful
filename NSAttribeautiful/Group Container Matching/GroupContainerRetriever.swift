@@ -25,6 +25,7 @@ class GroupContainerRetriever {
     }
     
     /// Checks the document against the group container match pattern
+    // TODO: - 
     private static func container(in document: String) throws -> String {
         let pattern = RegexPattern.patternFor(.groupContainerMatch)
         guard let match = RegexHelper.firstMatchFor(pattern: pattern, in: document) else {
@@ -33,6 +34,7 @@ class GroupContainerRetriever {
         return match
     }
     
+    // TODO: - 
     private static func parseGroups(from container: String) throws -> GroupContainer {
         let pattern = RegexPattern.patternFor(.groupsMatch)
         return GroupContainer(groups: [])
