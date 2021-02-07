@@ -10,8 +10,11 @@ import Foundation
 /// Represent the verbosity (or lack of) of console messages
 enum DebugLogLevel: Int {
     
+    /// Receive no messages (not recommended)
     case none
+    /// Receive errors only (this is the default setting)
     case errors
+    /// Receive all debugging messages
     case verbose
     
 }

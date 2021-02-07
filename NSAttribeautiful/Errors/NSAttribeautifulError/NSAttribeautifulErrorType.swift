@@ -10,5 +10,6 @@ import Foundation
 /// Represents the broad category of error
 enum NSAttribeautifulErrorType {
     case groupContainerMatching
+    case groupMatching
     case unknownError
 }

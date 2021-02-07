@@ -78,4 +78,10 @@ extension MatchingAction {
         #"(?<=\:)\w+(?=\])"#
     }
     
+    /// The pattern for matching a single string to be styled from a document.
+    /// The styled string must be enclosed in the client selected prefix tokens.
+    private static var styleableOperandPattern: String {
+        #"\#(prefixToken).+\#(suffixToken)"#
+    }
+    
 }

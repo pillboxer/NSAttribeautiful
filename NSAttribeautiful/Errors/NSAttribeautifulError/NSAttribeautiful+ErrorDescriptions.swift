@@ -16,9 +16,11 @@ extension NSAttribeautifulError {
     private var rawDescription: String {
         switch self {
         case.missingGroupContainer:
-            return "Could not find a Group Container at the beginning of document."
+            return "Could not find a GroupContainer at the beginning of document."
         case .moreThanOneGroupContainerFound:
-            return "More than one Group Container found in document."
+            return "More than one GroupContainer found in document."
+        case .groupMatchFailed:
+            return "Unable to match Group(s) in GroupContainer"
         }
     }
     
@@ -27,7 +29,9 @@ extension NSAttribeautifulError {
         let prefix: String
         switch errorType {
         case .groupContainerMatching:
-            prefix = "GROUP CONTAINER MATCHING ERROR"
+            prefix = "GROUPCONTAINER MATCHING ERROR"
+        case .groupMatching:
+            prefix = "GROUPMATCHING FORMATTING ERROR"
         default:
             prefix = "UNKNOWN ERROR"
         }

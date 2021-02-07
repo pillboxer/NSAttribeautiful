@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		86300DF025C7114500BF0893 /* NSAttribeautiful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86300DE625C7114500BF0893 /* NSAttribeautiful.framework */; };
 		86300DF725C7114500BF0893 /* NSAttribeautiful.h in Headers */ = {isa = PBXBuildFile; fileRef = 86300DE925C7114500BF0893 /* NSAttribeautiful.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		86300E1A25C7115C00BF0893 /* GroupList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E0325C7115C00BF0893 /* GroupList.swift */; };
+		86300E1A25C7115C00BF0893 /* GroupContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E0325C7115C00BF0893 /* GroupContainer.swift */; };
 		86300E1B25C7115C00BF0893 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E0425C7115C00BF0893 /* Group.swift */; };
 		86300E1C25C7115C00BF0893 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E0625C7115C00BF0893 /* String+Extensions.swift */; };
 		86300E1D25C7115C00BF0893 /* DebugLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E0925C7115C00BF0893 /* DebugLogger.swift */; };
@@ -45,7 +45,7 @@
 		86300DEA25C7114500BF0893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86300DEF25C7114500BF0893 /* NSAttribeautifulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSAttribeautifulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86300DF625C7114500BF0893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86300E0325C7115C00BF0893 /* GroupList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupList.swift; sourceTree = "<group>"; };
+		86300E0325C7115C00BF0893 /* GroupContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupContainer.swift; sourceTree = "<group>"; };
 		86300E0425C7115C00BF0893 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		86300E0625C7115C00BF0893 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		86300E0925C7115C00BF0893 /* DebugLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugLogger.swift; sourceTree = "<group>"; };
@@ -109,7 +109,6 @@
 				86300E0725C7115C00BF0893 /* Errors */,
 				86300E0525C7115C00BF0893 /* Extensions */,
 				86300E1825C7115C00BF0893 /* Group Container Matching */,
-				86300E0F25C7115C00BF0893 /* Group Matching */,
 				86300E0225C7115C00BF0893 /* Models */,
 				86300E1425C7115C00BF0893 /* Regex */,
 				86300DE925C7114500BF0893 /* NSAttribeautiful.h */,
@@ -132,7 +131,7 @@
 		86300E0225C7115C00BF0893 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				86300E0325C7115C00BF0893 /* GroupList.swift */,
+				86300E0325C7115C00BF0893 /* GroupContainer.swift */,
 				86300E0425C7115C00BF0893 /* Group.swift */,
 			);
 			path = Models;
@@ -172,13 +171,6 @@
 				86300E0E25C7115C00BF0893 /* NSAttribeautifulErrorType.swift */,
 			);
 			path = NSAttribeautifulError;
-			sourceTree = "<group>";
-		};
-		86300E0F25C7115C00BF0893 /* Group Matching */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Group Matching";
 			sourceTree = "<group>";
 		};
 		86300E1025C7115C00BF0893 /* Client Interface */ = {
@@ -329,7 +321,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "KEYWORDS=\"public\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep -H --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS).*/ warning: \\Please ensure this is commented/\"\n\n";
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\nKEYWORDS=\"public\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep -H --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS).*/ warning: \\Please ensure this is commented/\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -338,7 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86300E1A25C7115C00BF0893 /* GroupList.swift in Sources */,
+				86300E1A25C7115C00BF0893 /* GroupContainer.swift in Sources */,
 				86300E2825C7115C00BF0893 /* GroupContainerRetriever.swift in Sources */,
 				86300E2625C7115C00BF0893 /* RegexPatternType.swift in Sources */,
 				86300E1C25C7115C00BF0893 /* String+Extensions.swift in Sources */,
