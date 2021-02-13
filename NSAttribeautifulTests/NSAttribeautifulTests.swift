@@ -13,6 +13,7 @@ class NSAttribeautifulTests: XCTestCase {
     override func tearDown() {
         NSAttribeautiful.prefixToken = "≤"
         NSAttribeautiful.suffixToken = "≥"
+        NSAttribeautiful.identifierFontMap = [:]
     }
 
 }

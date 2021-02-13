@@ -24,9 +24,12 @@
 		86300E2625C7115C00BF0893 /* RegexPatternType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E1625C7115C00BF0893 /* RegexPatternType.swift */; };
 		86300E2725C7115C00BF0893 /* RegexPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E1725C7115C00BF0893 /* RegexPattern.swift */; };
 		86300E2825C7115C00BF0893 /* GroupContainerRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E1925C7115C00BF0893 /* GroupContainerRetriever.swift */; };
-		86300E3125C7117600BF0893 /* NSAttribeautiful+GroupContainerMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E2E25C7117600BF0893 /* NSAttribeautiful+GroupContainerMatching.swift */; };
+		86300E3125C7117600BF0893 /* NSAttribeautifulTests+GroupContainerMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E2E25C7117600BF0893 /* NSAttribeautifulTests+GroupContainerMatching.swift */; };
 		86300E3225C7117600BF0893 /* NSAttribeautifulTests+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E2F25C7117600BF0893 /* NSAttribeautifulTests+Regex.swift */; };
 		86300E3D25C713E900BF0893 /* NSAttribeautifulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E3C25C713E800BF0893 /* NSAttribeautifulTests.swift */; };
+		8658CED525D1CC8F0048F840 /* NSAttribeautiful+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CED425D1CC8F0048F840 /* NSAttribeautiful+Font.swift */; };
+		8658CEE325D1CF020048F840 /* NSAttribeautifulTests+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CEE225D1CF020048F840 /* NSAttribeautifulTests+Font.swift */; };
+		8658CEE925D1D0880048F840 /* GroupStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CEE825D1D0880048F840 /* GroupStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +63,13 @@
 		86300E1625C7115C00BF0893 /* RegexPatternType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexPatternType.swift; sourceTree = "<group>"; };
 		86300E1725C7115C00BF0893 /* RegexPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexPattern.swift; sourceTree = "<group>"; };
 		86300E1925C7115C00BF0893 /* GroupContainerRetriever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupContainerRetriever.swift; sourceTree = "<group>"; };
-		86300E2E25C7117600BF0893 /* NSAttribeautiful+GroupContainerMatching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttribeautiful+GroupContainerMatching.swift"; sourceTree = "<group>"; };
+		86300E2E25C7117600BF0893 /* NSAttribeautifulTests+GroupContainerMatching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+GroupContainerMatching.swift"; sourceTree = "<group>"; };
 		86300E2F25C7117600BF0893 /* NSAttribeautifulTests+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+Regex.swift"; sourceTree = "<group>"; };
 		86300E3C25C713E800BF0893 /* NSAttribeautifulTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttribeautifulTests.swift; sourceTree = "<group>"; };
+		8658CED425D1CC8F0048F840 /* NSAttribeautiful+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautiful+Font.swift"; sourceTree = "<group>"; };
+		8658CEE225D1CF020048F840 /* NSAttribeautifulTests+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+Font.swift"; sourceTree = "<group>"; };
+		8658CEE825D1D0880048F840 /* GroupStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupStyle.swift; sourceTree = "<group>"; };
+		86DF10A025D5C14F0086D40A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/iOSSupport/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +97,7 @@
 				86300DE825C7114500BF0893 /* NSAttribeautiful */,
 				86300DF325C7114500BF0893 /* NSAttribeautifulTests */,
 				86300DE725C7114500BF0893 /* Products */,
+				86DF109F25D5C14F0086D40A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,10 +128,11 @@
 		86300DF325C7114500BF0893 /* NSAttribeautifulTests */ = {
 			isa = PBXGroup;
 			children = (
-				86300E2E25C7117600BF0893 /* NSAttribeautiful+GroupContainerMatching.swift */,
-				86300E3C25C713E800BF0893 /* NSAttribeautifulTests.swift */,
-				86300E2F25C7117600BF0893 /* NSAttribeautifulTests+Regex.swift */,
 				86300DF625C7114500BF0893 /* Info.plist */,
+				86300E3C25C713E800BF0893 /* NSAttribeautifulTests.swift */,
+				86300E2E25C7117600BF0893 /* NSAttribeautifulTests+GroupContainerMatching.swift */,
+				86300E2F25C7117600BF0893 /* NSAttribeautifulTests+Regex.swift */,
+				8658CEE225D1CF020048F840 /* NSAttribeautifulTests+Font.swift */,
 			);
 			path = NSAttribeautifulTests;
 			sourceTree = "<group>";
@@ -133,6 +142,7 @@
 			children = (
 				86300E0325C7115C00BF0893 /* GroupContainer.swift */,
 				86300E0425C7115C00BF0893 /* Group.swift */,
+				8658CEE825D1D0880048F840 /* GroupStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +189,7 @@
 				86300E1125C7115C00BF0893 /* NSAttribeautiful.swift */,
 				86300E1225C7115C00BF0893 /* NSAttribeautiful+Debug.swift */,
 				86300E1325C7115C00BF0893 /* NSAttribeautiful+Tokens.swift */,
+				8658CED425D1CC8F0048F840 /* NSAttribeautiful+Font.swift */,
 			);
 			path = "Client Interface";
 			sourceTree = "<group>";
@@ -199,6 +210,14 @@
 				86300E1925C7115C00BF0893 /* GroupContainerRetriever.swift */,
 			);
 			path = "Group Container Matching";
+			sourceTree = "<group>";
+		};
+		86DF109F25D5C14F0086D40A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86DF10A025D5C14F0086D40A /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +351,7 @@
 			files = (
 				86300E1A25C7115C00BF0893 /* GroupContainer.swift in Sources */,
 				86300E2825C7115C00BF0893 /* GroupContainerRetriever.swift in Sources */,
+				8658CEE925D1D0880048F840 /* GroupStyle.swift in Sources */,
 				86300E2625C7115C00BF0893 /* RegexPatternType.swift in Sources */,
 				86300E1C25C7115C00BF0893 /* String+Extensions.swift in Sources */,
 				86300E1B25C7115C00BF0893 /* Group.swift in Sources */,
@@ -340,6 +360,7 @@
 				86300E2125C7115C00BF0893 /* NSAttribeautifulErrorType.swift in Sources */,
 				86300E2325C7115C00BF0893 /* NSAttribeautiful+Debug.swift in Sources */,
 				86300E2725C7115C00BF0893 /* RegexPattern.swift in Sources */,
+				8658CED525D1CC8F0048F840 /* NSAttribeautiful+Font.swift in Sources */,
 				86300E1E25C7115C00BF0893 /* DebugLogLevel.swift in Sources */,
 				86300E2025C7115C00BF0893 /* NSAttribeautifulError.swift in Sources */,
 				86300E2225C7115C00BF0893 /* NSAttribeautiful.swift in Sources */,
@@ -352,8 +373,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8658CEE325D1CF020048F840 /* NSAttribeautifulTests+Font.swift in Sources */,
 				86300E3225C7117600BF0893 /* NSAttribeautifulTests+Regex.swift in Sources */,
-				86300E3125C7117600BF0893 /* NSAttribeautiful+GroupContainerMatching.swift in Sources */,
+				86300E3125C7117600BF0893 /* NSAttribeautifulTests+GroupContainerMatching.swift in Sources */,
 				86300E3D25C713E900BF0893 /* NSAttribeautifulTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +449,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "macosx iphoneos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -486,7 +508,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "macosx iphoneos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
