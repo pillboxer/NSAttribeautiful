@@ -11,8 +11,8 @@ import XCTest
 class NSAttribeautifulTests: XCTestCase {
 
     override func tearDown() {
-        NSAttribeautiful.prefixToken = "≤"
-        NSAttribeautiful.suffixToken = "≥"
+        RegexPattern.prefixToken = "≤"
+        RegexPattern.suffixToken = "≥"
         NSAttribeautiful.identifierFontMap = [:]
     }
 

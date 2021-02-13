@@ -19,7 +19,6 @@
 		86300E2125C7115C00BF0893 /* NSAttribeautifulErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E0E25C7115C00BF0893 /* NSAttribeautifulErrorType.swift */; };
 		86300E2225C7115C00BF0893 /* NSAttribeautiful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E1125C7115C00BF0893 /* NSAttribeautiful.swift */; };
 		86300E2325C7115C00BF0893 /* NSAttribeautiful+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E1225C7115C00BF0893 /* NSAttribeautiful+Debug.swift */; };
-		86300E2425C7115C00BF0893 /* NSAttribeautiful+Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E1325C7115C00BF0893 /* NSAttribeautiful+Tokens.swift */; };
 		86300E2525C7115C00BF0893 /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E1525C7115C00BF0893 /* RegexHelper.swift */; };
 		86300E2625C7115C00BF0893 /* RegexPatternType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E1625C7115C00BF0893 /* RegexPatternType.swift */; };
 		86300E2725C7115C00BF0893 /* RegexPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E1725C7115C00BF0893 /* RegexPattern.swift */; };
@@ -27,6 +26,8 @@
 		86300E3125C7117600BF0893 /* NSAttribeautifulTests+GroupContainerMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E2E25C7117600BF0893 /* NSAttribeautifulTests+GroupContainerMatching.swift */; };
 		86300E3225C7117600BF0893 /* NSAttribeautifulTests+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E2F25C7117600BF0893 /* NSAttribeautifulTests+Regex.swift */; };
 		86300E3D25C713E900BF0893 /* NSAttribeautifulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E3C25C713E800BF0893 /* NSAttribeautifulTests.swift */; };
+		863BA90B25D7CA9500C12693 /* StyleApplicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BA90A25D7CA9500C12693 /* StyleApplicator.swift */; };
+		863BA91125D7CED100C12693 /* NSAttribeautifulTests+StyleApplicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BA91025D7CED100C12693 /* NSAttribeautifulTests+StyleApplicator.swift */; };
 		8658CED525D1CC8F0048F840 /* NSAttribeautiful+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CED425D1CC8F0048F840 /* NSAttribeautiful+Font.swift */; };
 		8658CEE325D1CF020048F840 /* NSAttribeautifulTests+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CEE225D1CF020048F840 /* NSAttribeautifulTests+Font.swift */; };
 		8658CEE925D1D0880048F840 /* GroupStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CEE825D1D0880048F840 /* GroupStyle.swift */; };
@@ -58,7 +59,6 @@
 		86300E0E25C7115C00BF0893 /* NSAttribeautifulErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttribeautifulErrorType.swift; sourceTree = "<group>"; };
 		86300E1125C7115C00BF0893 /* NSAttribeautiful.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttribeautiful.swift; sourceTree = "<group>"; };
 		86300E1225C7115C00BF0893 /* NSAttribeautiful+Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttribeautiful+Debug.swift"; sourceTree = "<group>"; };
-		86300E1325C7115C00BF0893 /* NSAttribeautiful+Tokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttribeautiful+Tokens.swift"; sourceTree = "<group>"; };
 		86300E1525C7115C00BF0893 /* RegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexHelper.swift; sourceTree = "<group>"; };
 		86300E1625C7115C00BF0893 /* RegexPatternType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexPatternType.swift; sourceTree = "<group>"; };
 		86300E1725C7115C00BF0893 /* RegexPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexPattern.swift; sourceTree = "<group>"; };
@@ -66,6 +66,8 @@
 		86300E2E25C7117600BF0893 /* NSAttribeautifulTests+GroupContainerMatching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+GroupContainerMatching.swift"; sourceTree = "<group>"; };
 		86300E2F25C7117600BF0893 /* NSAttribeautifulTests+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+Regex.swift"; sourceTree = "<group>"; };
 		86300E3C25C713E800BF0893 /* NSAttribeautifulTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttribeautifulTests.swift; sourceTree = "<group>"; };
+		863BA90A25D7CA9500C12693 /* StyleApplicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleApplicator.swift; sourceTree = "<group>"; };
+		863BA91025D7CED100C12693 /* NSAttribeautifulTests+StyleApplicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+StyleApplicator.swift"; sourceTree = "<group>"; };
 		8658CED425D1CC8F0048F840 /* NSAttribeautiful+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautiful+Font.swift"; sourceTree = "<group>"; };
 		8658CEE225D1CF020048F840 /* NSAttribeautifulTests+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+Font.swift"; sourceTree = "<group>"; };
 		8658CEE825D1D0880048F840 /* GroupStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupStyle.swift; sourceTree = "<group>"; };
@@ -117,10 +119,11 @@
 				86300E0725C7115C00BF0893 /* Errors */,
 				86300E0525C7115C00BF0893 /* Extensions */,
 				86300E1825C7115C00BF0893 /* Group Container Matching */,
-				86300E0225C7115C00BF0893 /* Models */,
-				86300E1425C7115C00BF0893 /* Regex */,
-				86300DE925C7114500BF0893 /* NSAttribeautiful.h */,
 				86300DEA25C7114500BF0893 /* Info.plist */,
+				86300E0225C7115C00BF0893 /* Models */,
+				86300DE925C7114500BF0893 /* NSAttribeautiful.h */,
+				86300E1425C7115C00BF0893 /* Regex */,
+				863BA90925D7CA7C00C12693 /* Styling */,
 			);
 			path = NSAttribeautiful;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 				86300E2E25C7117600BF0893 /* NSAttribeautifulTests+GroupContainerMatching.swift */,
 				86300E2F25C7117600BF0893 /* NSAttribeautifulTests+Regex.swift */,
 				8658CEE225D1CF020048F840 /* NSAttribeautifulTests+Font.swift */,
+				863BA91025D7CED100C12693 /* NSAttribeautifulTests+StyleApplicator.swift */,
 			);
 			path = NSAttribeautifulTests;
 			sourceTree = "<group>";
@@ -188,7 +192,6 @@
 			children = (
 				86300E1125C7115C00BF0893 /* NSAttribeautiful.swift */,
 				86300E1225C7115C00BF0893 /* NSAttribeautiful+Debug.swift */,
-				86300E1325C7115C00BF0893 /* NSAttribeautiful+Tokens.swift */,
 				8658CED425D1CC8F0048F840 /* NSAttribeautiful+Font.swift */,
 			);
 			path = "Client Interface";
@@ -210,6 +213,14 @@
 				86300E1925C7115C00BF0893 /* GroupContainerRetriever.swift */,
 			);
 			path = "Group Container Matching";
+			sourceTree = "<group>";
+		};
+		863BA90925D7CA7C00C12693 /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				863BA90A25D7CA9500C12693 /* StyleApplicator.swift */,
+			);
+			path = Styling;
 			sourceTree = "<group>";
 		};
 		86DF109F25D5C14F0086D40A /* Frameworks */ = {
@@ -355,7 +366,6 @@
 				86300E2625C7115C00BF0893 /* RegexPatternType.swift in Sources */,
 				86300E1C25C7115C00BF0893 /* String+Extensions.swift in Sources */,
 				86300E1B25C7115C00BF0893 /* Group.swift in Sources */,
-				86300E2425C7115C00BF0893 /* NSAttribeautiful+Tokens.swift in Sources */,
 				86300E1D25C7115C00BF0893 /* DebugLogger.swift in Sources */,
 				86300E2125C7115C00BF0893 /* NSAttribeautifulErrorType.swift in Sources */,
 				86300E2325C7115C00BF0893 /* NSAttribeautiful+Debug.swift in Sources */,
@@ -365,6 +375,7 @@
 				86300E2025C7115C00BF0893 /* NSAttribeautifulError.swift in Sources */,
 				86300E2225C7115C00BF0893 /* NSAttribeautiful.swift in Sources */,
 				86300E1F25C7115C00BF0893 /* NSAttribeautiful+ErrorDescriptions.swift in Sources */,
+				863BA90B25D7CA9500C12693 /* StyleApplicator.swift in Sources */,
 				86300E2525C7115C00BF0893 /* RegexHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				863BA91125D7CED100C12693 /* NSAttribeautifulTests+StyleApplicator.swift in Sources */,
 				8658CEE325D1CF020048F840 /* NSAttribeautifulTests+Font.swift in Sources */,
 				86300E3225C7117600BF0893 /* NSAttribeautifulTests+Regex.swift in Sources */,
 				86300E3125C7117600BF0893 /* NSAttribeautifulTests+GroupContainerMatching.swift in Sources */,

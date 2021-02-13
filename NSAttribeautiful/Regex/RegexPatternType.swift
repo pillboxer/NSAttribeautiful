@@ -18,55 +18,54 @@ enum MatchingAction {
     case fontMatch
     /// Matches the size in a group
     case sizeMatch
-    ///Matches the color in a group
+    /// Matches the color in a group
     case colorMatch
+    /// Matches the stylable argument in a group
+    case stylableArgument
     
     /// The string literal pattern to hand to `NSRegularExpression`
     var pattern: String {
         switch self {
         case .groupContainerMatch:
-            return MatchingAction.groupContainerPattern
+            return RegexPattern.groupContainerPattern
         case .groupsMatch:
-            return MatchingAction.groupsPattern
+            return RegexPattern.groupsPattern
         case .fontMatch:
-            return MatchingAction.fontPattern
+            return RegexPattern.fontPattern
         case .sizeMatch:
-            return MatchingAction.sizePattern
+            return RegexPattern.sizePattern
         case .colorMatch:
-            return MatchingAction.colorPattern
+            return RegexPattern.colorPattern
+        case .stylableArgument:
+            return RegexPattern.styleableArgumentPattern
         }
     }
 }
 
-extension MatchingAction {
-    
-    /// The client selected prefix token (defaults to `≤`)
-    private static var prefixToken: String { NSAttribeautiful.prefixToken }
-    /// The client selected prefix token (defaults to `≥`)
-    private static var suffixToken: String { NSAttribeautiful.suffixToken }
+fileprivate extension RegexPattern {
     
     /// The pattern for matching a group container
-    private static var groupContainerPattern: String {
-        #"^\#(prefixToken)(?:\[\w+:\d+\.?\d+:\w+\])+\#(suffixToken)"#
+    static var groupContainerPattern: String {
+        #"^\#(prefixToken)(?:\[\w+:\d+\.?\d*:\w+\])+\#(suffixToken)"#
     }
     
     /// The pattern for matching groups within a container
-    private static var groupsPattern: String {
+    static var groupsPattern: String {
         #"\[\w+:\d+\.?\d+:\w+\]"#
     }
     
     /// The pattern for matching the font from a group
     ///
     /// * **(?<=\[)** Positive lookbehind asserts a word must be preceeded by an opening bracket
-    private static var fontPattern: String {
+    static var fontPattern: String {
         #"(?<=\[)\w+"#
     }
     
     /// The pattern for matching the size from a group
     ///
     /// * **(?<=\:)** Positive lookbehind asserts any value must be preceeded by a colon.
-    private static var sizePattern: String {
-        #"(?<=\:)\d+\.?\d+"#
+    static var sizePattern: String {
+        #"(?<=\:)\d+\.?\d*"#
     }
     
     /// The pattern for matching the size from a group
@@ -74,14 +73,16 @@ extension MatchingAction {
     /// * **(?<=\:)** Positive lookbehind asserts any value must be preceeded by an opening bracket.
     ///
     /// * **(?=\])** Positive lookahead asserts any value must be preceeded by an opening bracket
-    private static var colorPattern: String {
+    static var colorPattern: String {
         #"(?<=\:)\w+(?=\])"#
     }
     
     /// The pattern for matching a single string to be styled from a document.
     /// The styled string must be enclosed in the client selected prefix tokens.
-    private static var styleableOperandPattern: String {
-        #"\#(prefixToken).+\#(suffixToken)"#
+    static var styleableArgumentPattern: String {
+        let pattern = #"(?<=\#(prefixToken))[^\#(prefixToken)\#(suffixToken)]+(?=\#(suffixToken))"#
+        print(pattern)
+        return pattern
     }
     
 }
