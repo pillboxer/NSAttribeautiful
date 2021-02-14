@@ -29,7 +29,6 @@ extension NSAttribeautifulTests {
     
     func testCorrectlyFormattedGroupContainerReturnsContainer() {
         let document = NSAttribeautifulTests.correctlyFormattedContainerDocument
-        print(parseDocument(document))
         XCTAssertTrue(parseDocument(document).0 != nil)
     }
     
