@@ -70,7 +70,8 @@ extension NSAttribeautifulTests {
 extension NSAttribeautifulTests {
     
     func testGroupContainerIsMatchedFromDocumentWithCustomTokens() {
-        let _ = NSAttribeautiful(document: "", customPrefix: "&", customSuffix: "*")
+        let instance = NSAttribeautiful(document: "", customPrefix: "&", customSuffix: "*")
+        let _ = try? instance.beautifiedDocument()
         let expected = NSAttribeautifulTests.containerWithCustomTokens
         let pattern = RegexPattern.patternFor(.groupContainerMatch)
         let document = NSAttribeautifulTests.documentWithCustomTokens
@@ -94,6 +95,8 @@ extension NSAttribeautifulTests {
     }
     
     func testArgumentsAreMatchedFromDocumentWithCustomTokens() {
+        let instance = NSAttribeautiful(document: "", customPrefix: "{", customSuffix: "}")
+        let _ = try? instance.beautifiedDocument()
         let expected = NSAttribeautifulTests.argumentsWithoutTokens
         let document = NSAttribeautifulTests.strippedDocumentWithCustomTokens
         let pattern = RegexPattern.patternFor(.stylableArgument)

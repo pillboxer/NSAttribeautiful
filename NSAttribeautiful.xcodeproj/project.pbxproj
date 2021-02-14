@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		862235A625D9349300A5A57D /* NSAttribeautifulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862235A425D9349300A5A57D /* NSAttribeautifulViewController.swift */; };
+		862235A725D9349300A5A57D /* NSAttribeautifulViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862235A525D9349300A5A57D /* NSAttribeautifulViewController.xib */; };
 		86300DF025C7114500BF0893 /* NSAttribeautiful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86300DE625C7114500BF0893 /* NSAttribeautiful.framework */; };
 		86300DF725C7114500BF0893 /* NSAttribeautiful.h in Headers */ = {isa = PBXBuildFile; fileRef = 86300DE925C7114500BF0893 /* NSAttribeautiful.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		86300E1A25C7115C00BF0893 /* GroupContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E0325C7115C00BF0893 /* GroupContainer.swift */; };
@@ -28,9 +30,12 @@
 		86300E3D25C713E900BF0893 /* NSAttribeautifulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E3C25C713E800BF0893 /* NSAttribeautifulTests.swift */; };
 		863BA90B25D7CA9500C12693 /* StyleApplicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BA90A25D7CA9500C12693 /* StyleApplicator.swift */; };
 		863BA91125D7CED100C12693 /* NSAttribeautifulTests+StyleApplicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BA91025D7CED100C12693 /* NSAttribeautifulTests+StyleApplicator.swift */; };
+		863BA92125D9244000C12693 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BA92025D9244000C12693 /* Array+Extensions.swift */; };
+		863BA92625D9263700C12693 /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BA92525D9263700C12693 /* NSAttributedString+Extensions.swift */; };
 		8658CED525D1CC8F0048F840 /* NSAttribeautiful+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CED425D1CC8F0048F840 /* NSAttribeautiful+Font.swift */; };
 		8658CEE325D1CF020048F840 /* NSAttribeautifulTests+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CEE225D1CF020048F840 /* NSAttribeautifulTests+Font.swift */; };
 		8658CEE925D1D0880048F840 /* GroupStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CEE825D1D0880048F840 /* GroupStyle.swift */; };
+		86C84E2925D9389300FECCF7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86C84E2825D9389300FECCF7 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		862235A425D9349300A5A57D /* NSAttribeautifulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttribeautifulViewController.swift; sourceTree = "<group>"; };
+		862235A525D9349300A5A57D /* NSAttribeautifulViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NSAttribeautifulViewController.xib; sourceTree = "<group>"; };
 		86300DE625C7114500BF0893 /* NSAttribeautiful.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSAttribeautiful.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86300DE925C7114500BF0893 /* NSAttribeautiful.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSAttribeautiful.h; sourceTree = "<group>"; };
 		86300DEA25C7114500BF0893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,9 +75,12 @@
 		86300E3C25C713E800BF0893 /* NSAttribeautifulTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttribeautifulTests.swift; sourceTree = "<group>"; };
 		863BA90A25D7CA9500C12693 /* StyleApplicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleApplicator.swift; sourceTree = "<group>"; };
 		863BA91025D7CED100C12693 /* NSAttribeautifulTests+StyleApplicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+StyleApplicator.swift"; sourceTree = "<group>"; };
+		863BA92025D9244000C12693 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		863BA92525D9263700C12693 /* NSAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 		8658CED425D1CC8F0048F840 /* NSAttribeautiful+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautiful+Font.swift"; sourceTree = "<group>"; };
 		8658CEE225D1CF020048F840 /* NSAttribeautifulTests+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+Font.swift"; sourceTree = "<group>"; };
 		8658CEE825D1D0880048F840 /* GroupStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupStyle.swift; sourceTree = "<group>"; };
+		86C84E2825D9389300FECCF7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		86DF10A025D5C14F0086D40A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/iOSSupport/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -115,6 +125,7 @@
 		86300DE825C7114500BF0893 /* NSAttribeautiful */ = {
 			isa = PBXGroup;
 			children = (
+				86C84E2725D9388600FECCF7 /* Colors */,
 				86300E1025C7115C00BF0893 /* Client Interface */,
 				86300E0725C7115C00BF0893 /* Errors */,
 				86300E0525C7115C00BF0893 /* Extensions */,
@@ -155,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				86300E0625C7115C00BF0893 /* String+Extensions.swift */,
+				863BA92025D9244000C12693 /* Array+Extensions.swift */,
+				863BA92525D9263700C12693 /* NSAttributedString+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -193,6 +206,8 @@
 				86300E1125C7115C00BF0893 /* NSAttribeautiful.swift */,
 				86300E1225C7115C00BF0893 /* NSAttribeautiful+Debug.swift */,
 				8658CED425D1CC8F0048F840 /* NSAttribeautiful+Font.swift */,
+				862235A425D9349300A5A57D /* NSAttribeautifulViewController.swift */,
+				862235A525D9349300A5A57D /* NSAttribeautifulViewController.xib */,
 			);
 			path = "Client Interface";
 			sourceTree = "<group>";
@@ -221,6 +236,14 @@
 				863BA90A25D7CA9500C12693 /* StyleApplicator.swift */,
 			);
 			path = Styling;
+			sourceTree = "<group>";
+		};
+		86C84E2725D9388600FECCF7 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				86C84E2825D9389300FECCF7 /* Colors.xcassets */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		86DF109F25D5C14F0086D40A /* Frameworks */ = {
@@ -323,6 +346,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				862235A725D9349300A5A57D /* NSAttribeautifulViewController.xib in Resources */,
+				86C84E2925D9389300FECCF7 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +376,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\nKEYWORDS=\"public\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep -H --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS).*/ warning: \\Please ensure this is commented/\"\nfi\n";
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\nKEYWORDS0=\"public\"\nKEYWORDS1=\"FIXME:|TODO:\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep -H --with-filename --line-number --only-matching \"($KEYWORDS0).*\\$\" | perl -p -e \"s/($KEYWORDS0).*/ warning: \\Please ensure this is commented/\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep -H --with-filename --line-number --only-matching \"($KEYWORDS1).*\\$\" | perl -p -e \"s/($KEYWORDS1).*/ error: \\Please fix this/\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -361,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86300E1A25C7115C00BF0893 /* GroupContainer.swift in Sources */,
+				863BA92125D9244000C12693 /* Array+Extensions.swift in Sources */,
 				86300E2825C7115C00BF0893 /* GroupContainerRetriever.swift in Sources */,
 				8658CEE925D1D0880048F840 /* GroupStyle.swift in Sources */,
 				86300E2625C7115C00BF0893 /* RegexPatternType.swift in Sources */,
@@ -375,7 +401,9 @@
 				86300E2025C7115C00BF0893 /* NSAttribeautifulError.swift in Sources */,
 				86300E2225C7115C00BF0893 /* NSAttribeautiful.swift in Sources */,
 				86300E1F25C7115C00BF0893 /* NSAttribeautiful+ErrorDescriptions.swift in Sources */,
+				862235A625D9349300A5A57D /* NSAttribeautifulViewController.swift in Sources */,
 				863BA90B25D7CA9500C12693 /* StyleApplicator.swift in Sources */,
+				863BA92625D9263700C12693 /* NSAttributedString+Extensions.swift in Sources */,
 				86300E2525C7115C00BF0893 /* RegexHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +562,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = NSAttribeautiful/Colors/Colors.xcassets;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -559,6 +588,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = NSAttribeautiful/Colors/Colors.xcassets;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -594,6 +624,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = TouchNote.NSAttribeautifulTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -615,6 +646,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = TouchNote.NSAttribeautifulTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

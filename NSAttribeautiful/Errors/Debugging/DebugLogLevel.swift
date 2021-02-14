@@ -8,7 +8,7 @@
 import Foundation
 
 /// Represent the verbosity (or lack of) of console messages
-enum DebugLogLevel: Int {
+public enum DebugLogLevel: Int {
     
     /// Receive no messages (not recommended)
     case none

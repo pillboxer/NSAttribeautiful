@@ -10,7 +10,6 @@ import Foundation
 extension NSAttribeautiful {
     
     static var identifierFontMap: [String : String] = [:]
-    
     /// On encountering the `abbreviation`, `NSAttribeautiful` will replace it with the desired `font`, thus allowing for shorter `Group` declarations in documents.
     /// - Parameters:
     ///   - abbreviation: The abbreviated identifier in the document.

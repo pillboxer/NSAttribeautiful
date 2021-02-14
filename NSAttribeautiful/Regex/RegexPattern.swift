@@ -13,13 +13,17 @@ struct RegexPattern {
     /// The client selected prefix token (defaults to `≤`)
     static var prefixToken: String = "≤" {
         didSet {
-            prefixToken = #"\\#(prefixToken)"#
+            if prefixToken.first != #"\"# {
+                prefixToken = #"\\#(prefixToken)"#
+            }
         }
     }
     /// The client selected prefix token (defaults to `≥`)
     static var suffixToken: String = "≥" {
         didSet {
-            suffixToken = #"\\#(suffixToken)"#
+            if suffixToken.first != #"\"# {
+                suffixToken = #"\\#(suffixToken)"#
+            }
         }
     }
     

@@ -43,5 +43,10 @@ struct GroupStyle {
     }
     #endif
     
+    // FIXME: - NSColor also
+    var color: UIColor? {
+        UIColor(named: group.color, in: Bundle(for: NSAttribeautiful.self), compatibleWith: nil)
+    }
+    
     
 }

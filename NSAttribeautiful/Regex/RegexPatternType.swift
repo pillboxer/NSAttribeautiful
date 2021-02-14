@@ -22,6 +22,8 @@ enum MatchingAction {
     case colorMatch
     /// Matches the stylable argument in a group
     case stylableArgument
+    /// Matches any custom token, prefix or suffix
+    case customTokens
     
     /// The string literal pattern to hand to `NSRegularExpression`
     var pattern: String {
@@ -38,6 +40,8 @@ enum MatchingAction {
             return RegexPattern.colorPattern
         case .stylableArgument:
             return RegexPattern.styleableArgumentPattern
+        case .customTokens:
+            return RegexPattern.customTokenPattern
         }
     }
 }
@@ -83,6 +87,11 @@ fileprivate extension RegexPattern {
         let pattern = #"(?<=\#(prefixToken))[^\#(prefixToken)\#(suffixToken)]+(?=\#(suffixToken))"#
         print(pattern)
         return pattern
+    }
+    
+    /// The pattern for matching any custom token, prefix or suffix
+    static var customTokenPattern: String {
+        #"[\#(prefixToken)\#(suffixToken)]"#
     }
     
 }
