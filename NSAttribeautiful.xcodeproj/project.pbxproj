@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		862235A625D9349300A5A57D /* NSAttribeautifulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862235A425D9349300A5A57D /* NSAttribeautifulViewController.swift */; };
-		862235A725D9349300A5A57D /* NSAttribeautifulViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862235A525D9349300A5A57D /* NSAttribeautifulViewController.xib */; };
+		862235A625D9349300A5A57D /* NSAttribeautifulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862235A425D9349300A5A57D /* NSAttribeautifulViewController.swift */; platformFilter = ios; };
 		86300DF025C7114500BF0893 /* NSAttribeautiful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86300DE625C7114500BF0893 /* NSAttribeautiful.framework */; };
 		86300DF725C7114500BF0893 /* NSAttribeautiful.h in Headers */ = {isa = PBXBuildFile; fileRef = 86300DE925C7114500BF0893 /* NSAttribeautiful.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		86300E1A25C7115C00BF0893 /* GroupContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E0325C7115C00BF0893 /* GroupContainer.swift */; };
@@ -32,9 +31,14 @@
 		863BA91125D7CED100C12693 /* NSAttribeautifulTests+StyleApplicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BA91025D7CED100C12693 /* NSAttribeautifulTests+StyleApplicator.swift */; };
 		863BA92125D9244000C12693 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BA92025D9244000C12693 /* Array+Extensions.swift */; };
 		863BA92625D9263700C12693 /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BA92525D9263700C12693 /* NSAttributedString+Extensions.swift */; };
+		86553A5225E11FE0004F0AE4 /* NSAttribeautifulViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 862235A525D9349300A5A57D /* NSAttribeautifulViewController.xib */; platformFilter = ios; };
+		86553A5825E12011004F0AE4 /* NSAttribeautiful+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86553A5725E12011004F0AE4 /* NSAttribeautiful+ViewController.swift */; platformFilter = ios; };
 		8658CED525D1CC8F0048F840 /* NSAttribeautiful+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CED425D1CC8F0048F840 /* NSAttribeautiful+Font.swift */; };
 		8658CEE325D1CF020048F840 /* NSAttribeautifulTests+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CEE225D1CF020048F840 /* NSAttribeautifulTests+Font.swift */; };
 		8658CEE925D1D0880048F840 /* GroupStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CEE825D1D0880048F840 /* GroupStyle.swift */; };
+		8664997425E14BC40094CBF5 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8664997325E14BC40094CBF5 /* FontHelper.swift */; };
+		8664997725E14FAF0094CBF5 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8664996725E14A620094CBF5 /* UIColor+Extensions.swift */; platformFilter = ios; };
+		8664998025E150470094CBF5 /* NSColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8664996B25E14ACA0094CBF5 /* NSColor+Extensions.swift */; };
 		86C84E2925D9389300FECCF7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86C84E2825D9389300FECCF7 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -77,9 +81,13 @@
 		863BA91025D7CED100C12693 /* NSAttribeautifulTests+StyleApplicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+StyleApplicator.swift"; sourceTree = "<group>"; };
 		863BA92025D9244000C12693 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		863BA92525D9263700C12693 /* NSAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extensions.swift"; sourceTree = "<group>"; };
+		86553A5725E12011004F0AE4 /* NSAttribeautiful+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautiful+ViewController.swift"; sourceTree = "<group>"; };
 		8658CED425D1CC8F0048F840 /* NSAttribeautiful+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautiful+Font.swift"; sourceTree = "<group>"; };
 		8658CEE225D1CF020048F840 /* NSAttribeautifulTests+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+Font.swift"; sourceTree = "<group>"; };
 		8658CEE825D1D0880048F840 /* GroupStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupStyle.swift; sourceTree = "<group>"; };
+		8664996725E14A620094CBF5 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		8664996B25E14ACA0094CBF5 /* NSColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Extensions.swift"; sourceTree = "<group>"; };
+		8664997325E14BC40094CBF5 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		86C84E2825D9389300FECCF7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		86DF10A025D5C14F0086D40A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/iOSSupport/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -206,6 +214,7 @@
 				86300E1125C7115C00BF0893 /* NSAttribeautiful.swift */,
 				86300E1225C7115C00BF0893 /* NSAttribeautiful+Debug.swift */,
 				8658CED425D1CC8F0048F840 /* NSAttribeautiful+Font.swift */,
+				86553A5725E12011004F0AE4 /* NSAttribeautiful+ViewController.swift */,
 				862235A425D9349300A5A57D /* NSAttribeautifulViewController.swift */,
 				862235A525D9349300A5A57D /* NSAttribeautifulViewController.xib */,
 			);
@@ -234,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				863BA90A25D7CA9500C12693 /* StyleApplicator.swift */,
+				8664997325E14BC40094CBF5 /* FontHelper.swift */,
 			);
 			path = Styling;
 			sourceTree = "<group>";
@@ -242,6 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				86C84E2825D9389300FECCF7 /* Colors.xcassets */,
+				8664996725E14A620094CBF5 /* UIColor+Extensions.swift */,
+				8664996B25E14ACA0094CBF5 /* NSColor+Extensions.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -346,7 +358,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				862235A725D9349300A5A57D /* NSAttribeautifulViewController.xib in Resources */,
 				86C84E2925D9389300FECCF7 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,7 +396,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8664998025E150470094CBF5 /* NSColor+Extensions.swift in Sources */,
+				8664997725E14FAF0094CBF5 /* UIColor+Extensions.swift in Sources */,
+				86553A5225E11FE0004F0AE4 /* NSAttribeautifulViewController.xib in Sources */,
 				86300E1A25C7115C00BF0893 /* GroupContainer.swift in Sources */,
+				86553A5825E12011004F0AE4 /* NSAttribeautiful+ViewController.swift in Sources */,
 				863BA92125D9244000C12693 /* Array+Extensions.swift in Sources */,
 				86300E2825C7115C00BF0893 /* GroupContainerRetriever.swift in Sources */,
 				8658CEE925D1D0880048F840 /* GroupStyle.swift in Sources */,
@@ -400,6 +415,7 @@
 				86300E1E25C7115C00BF0893 /* DebugLogLevel.swift in Sources */,
 				86300E2025C7115C00BF0893 /* NSAttribeautifulError.swift in Sources */,
 				86300E2225C7115C00BF0893 /* NSAttribeautiful.swift in Sources */,
+				8664997425E14BC40094CBF5 /* FontHelper.swift in Sources */,
 				86300E1F25C7115C00BF0893 /* NSAttribeautiful+ErrorDescriptions.swift in Sources */,
 				862235A625D9349300A5A57D /* NSAttribeautifulViewController.swift in Sources */,
 				863BA90B25D7CA9500C12693 /* StyleApplicator.swift in Sources */,
@@ -484,7 +500,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -544,7 +560,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -573,7 +589,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = TouchNote.NSAttribeautiful;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -599,7 +615,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = TouchNote.NSAttribeautiful;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -621,7 +637,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = TouchNote.NSAttribeautifulTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -643,7 +659,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = TouchNote.NSAttribeautifulTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

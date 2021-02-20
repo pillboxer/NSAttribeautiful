@@ -10,11 +10,33 @@ import XCTest
 
 class NSAttribeautifulTests: XCTestCase {
     
-    // FIXME: - 
+    let customTokens = [";", ":", "*", "(", "!", "#", "¢", "©", "-", "_", "=", "¡", "|"]
+        
     func testAttribeautifiedStringIsStyledCorrectly() {
-        let document = "≤[myFont:123:green][anotherFont:12.3:blue]≥ This should not be affected but ≤this≥, ≤that≥ and ≤this≥ should."
+        let document = "≤[AmericanTypewriter:123:green][Copperplate:12.3:blue]≥ This should not be affected but ≤this≥, ≤that≥ and ≤this≥ should."
+        let expected = NSMutableAttributedString(string: "This should not be affected but this, that and this should.")
+        
+        let firstFont = FontHelper.fontWith(name: "AmericanTypewriter", size: 123)
+        let secondFont = FontHelper.fontWith(name: "Copperplate", size: 12.3)
+        
+        let firstColor = FontHelper.colorWith(name: "green")
+        let secondColor = FontHelper.colorWith(name: "blue")
+        
+        let firstRange = NSRange(location: 32, length: 4)
+        let secondRange = NSRange(location: 38, length: 4)
+        let thirdRange = NSRange(location: 47, length: 4)
+        
+        expected.addAttribute(.font, value: firstFont!, range: firstRange)
+        expected.addAttribute(.foregroundColor, value: firstColor!, range: firstRange)
+        
+        expected.addAttribute(.font, value: secondFont!, range: secondRange)
+        expected.addAttribute(.foregroundColor, value: secondColor!, range: secondRange)
+        
+        expected.addAttribute(.font, value: secondFont!, range: thirdRange)
+        expected.addAttribute(.foregroundColor, value: secondColor!, range: thirdRange)
+        
         let instance = NSAttribeautiful(document: document)
-        XCTAssertFalse(true)
+        XCTAssertEqual(try? instance.beautifiedDocument(), expected)
     }
 
     override func tearDown() {

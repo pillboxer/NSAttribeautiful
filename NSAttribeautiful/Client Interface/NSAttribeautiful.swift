@@ -6,11 +6,10 @@
 //
 
 import Foundation
-import UIKit
 
 public class NSAttribeautiful {
     
-    private let document: String
+    let document: String
     private let customPrefix: String?
     private let customSuffix: String?
     
@@ -41,12 +40,4 @@ public class NSAttribeautiful {
             throw error
         }
     }
-
-    // FIXME: -
-    public func debugViewController() throws -> UIViewController {
-        let beautified = try! beautifiedDocument()
-        let controller = NSAttribeautifulViewController(document: document, beautified: beautified)
-        return controller
-    }
-    
 }

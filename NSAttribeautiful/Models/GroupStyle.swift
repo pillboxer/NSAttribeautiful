@@ -23,30 +23,39 @@ struct GroupStyle {
         self.group = group
     }
     
+    private var size: Double? {
+        Double(group.size)
+    }
+    
+    private var fontName: String {
+        NSAttribeautiful.identifierFontMap[group.font] ?? group.font
+    }
+    
     #if os(iOS)
     var font: UIFont? {
-        guard let doubleSize = Double(group.size)else {
+        guard let size = size else {
             return nil
         }
-        let size = CGFloat(doubleSize)
-        let fontName = NSAttribeautiful.identifierFontMap[group.font] ?? group.font
-        return UIFont(name: fontName, size: size)
+        let fontSize = CGFloat(size)
+        return FontHelper.fontWith(name: fontName, size: fontSize)
     }
     #else
     var font: NSFont? {
-        guard let doubleSize = Double(group.size)else {
+        guard let size = size else {
             return nil
         }
-        let size = CGFloat(doubleSize)
-        let fontName = NSAttribeautiful.identifierFontMap[group.font] ?? group.font
-        return NSFont(name: fontName, size: size)
+        let fontSize = CGFloat(size)
+        return FontHelper.fontWith(name: fontName, size: fontSize)
     }
     #endif
     
-    // FIXME: - NSColor also
+    #if os(iOS)
     var color: UIColor? {
-        UIColor(named: group.color, in: Bundle(for: NSAttribeautiful.self), compatibleWith: nil)
+        UIColor(named: group.color)
     }
-    
-    
+    #else
+    var color: NSColor? {
+        NSColor(named: group.color)
+    }
+    #endif
 }

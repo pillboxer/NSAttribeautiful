@@ -4,15 +4,11 @@ import XCTest
 extension NSAttribeautifulTests {
     
     private static let documentWithStandardTokens = "≤[myFont:123:green][anotherFont:12.3:blue]≥ This should not be affected but ≤this≥, ≤that≥ and ≤this≥ should."
-    private static let documentWithCustomTokens = "&[myFont:123:green][anotherFont:12.3:blue]* This should not be affected but &this*, &that* and &this* should."
-
     private static let containerWithStandardTokens = "≤[myFont:123:green][anotherFont:12.3:blue]≥"
-    private static let containerWithCustomTokens = "&[myFont:123:green][anotherFont:12.3:blue]*"
     
     private static let groupsWithoutTokens = ["[myFont:123:green]","[anotherFont:12.3:blue]"]
     
     private static let strippedDocumentWithStandardTokens = "This should not be affected but ≤this≥, ≤that≥ and ≤this≥ should."
-    private static let strippedDocumentWithCustomTokens = "This should not be affected but {this}, {that} and {this} should."
     
     private static let argumentsWithoutTokens = ["this", "that", "this"]
     
@@ -69,12 +65,26 @@ extension NSAttribeautifulTests {
 // MARK: - Custom Token Tests
 extension NSAttribeautifulTests {
     
+    func documentWithCustomTokens(prefix: String, suffix: String) -> String {
+        "\(prefix)[myFont:123:green][anotherFont:12.3:blue]\(suffix) This should not be affected but \(prefix)this\(suffix), \(prefix)that\(suffix) and \(prefix)this\(suffix) should."
+    }
+    
+    func containerWithCustomTokens(prefix: String, suffix: String) -> String {
+        "\(prefix)[myFont:123:green][anotherFont:12.3:blue]\(suffix)"
+    }
+    
+    func strippedDocumentWithCustomTokens(prefix: String, suffix: String) -> String {
+        "This should not be affected but \(prefix)this\(suffix), \(prefix)that\(suffix) and \(prefix)this\(suffix) should."
+    }
+    
     func testGroupContainerIsMatchedFromDocumentWithCustomTokens() {
-        let instance = NSAttribeautiful(document: "", customPrefix: "&", customSuffix: "*")
+        let randomPrefix = customTokens.randomElement()!
+        let randomSuffix = customTokens.randomElement()!
+        let instance = NSAttribeautiful(document: "", customPrefix: randomPrefix, customSuffix: randomSuffix)
         let _ = try? instance.beautifiedDocument()
-        let expected = NSAttribeautifulTests.containerWithCustomTokens
+        let expected = containerWithCustomTokens(prefix: randomPrefix, suffix: randomSuffix)
         let pattern = RegexPattern.patternFor(.groupContainerMatch)
-        let document = NSAttribeautifulTests.documentWithCustomTokens
+        let document = documentWithCustomTokens(prefix: randomPrefix, suffix: randomSuffix)
         let match = RegexHelper.firstMatchFor(pattern: pattern, in: document)
         XCTAssertEqual(match, expected)
     }
@@ -95,10 +105,12 @@ extension NSAttribeautifulTests {
     }
     
     func testArgumentsAreMatchedFromDocumentWithCustomTokens() {
-        let instance = NSAttribeautiful(document: "", customPrefix: "{", customSuffix: "}")
-        let _ = try? instance.beautifiedDocument()
+        let randomPrefix = customTokens.randomElement()!
+        let randomSuffix = customTokens.randomElement()!
+        RegexPattern.prefixToken = randomPrefix
+        RegexPattern.suffixToken = randomSuffix
         let expected = NSAttribeautifulTests.argumentsWithoutTokens
-        let document = NSAttribeautifulTests.strippedDocumentWithCustomTokens
+        let document = strippedDocumentWithCustomTokens(prefix: randomPrefix, suffix: randomSuffix)
         let pattern = RegexPattern.patternFor(.stylableArgument)
         let match = RegexHelper.matchesFor(pattern: pattern, in: document)
         XCTAssertEqual(match, expected)

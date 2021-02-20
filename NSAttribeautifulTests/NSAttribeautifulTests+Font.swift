@@ -16,6 +16,16 @@ extension NSAttribeautifulTests {
     private static let targetFontName = "American Typewriter"
     private static let containerWithAbbreviatedFont = "≤[atr:12.3:blue]≥"
     
+    #if os(iOS)
+    var expectedFont: UIFont? {
+        UIFont(name: NSAttribeautifulTests.targetFontName, size: 12.3)
+    }
+    #else
+    var expectedFont: NSFont? {
+        NSFont(name: NSAttribeautifulTests.targetFontName, size: 12.3)
+    }
+    #endif
+    
     func testAddingAnAbbreviatedFontAddsToMap() {
         let abbreviation = NSAttribeautifulTests.abbreviatedFontName
         let expected = NSAttribeautifulTests.targetFontName
@@ -24,12 +34,11 @@ extension NSAttribeautifulTests {
         XCTAssertEqual(value, expected)
     }
     
-    func testAddingAnAbbreviatedFontResultsInCorrectUIFont() {
-        let expected = UIFont(name: NSAttribeautifulTests.targetFontName, size: 12.3)
+    func testAddingAnAbbreviatedFontResultsInCorrectFont() {
         NSAttribeautiful.identifyAbbreviation("atr", withFont: NSAttribeautifulTests.targetFontName)
         let group = Group(font: "atr", size: "12.3", color: "blue")
         let groupStyle = GroupStyle(group: group)
-        XCTAssertEqual(groupStyle.font, expected)
+        XCTAssertEqual(groupStyle.font, expectedFont)
     }
     
 }

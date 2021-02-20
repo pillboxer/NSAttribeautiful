@@ -55,7 +55,7 @@ fileprivate extension RegexPattern {
     
     /// The pattern for matching groups within a container
     static var groupsPattern: String {
-        #"\[\w+:\d+\.?\d+:\w+\]"#
+        #"\[\w+:\d+\.?\d*:\w+\]"#
     }
     
     /// The pattern for matching the font from a group
