@@ -16,12 +16,15 @@ class GroupContainerRetriever {
         do {
             let containerString = try container(in: document)
             let groups = try parseGroups(from: containerString)
-            return GroupContainer(groups: groups)
+            let container = GroupContainer(groups: groups)
+            DebugLogger.log(message: "Retrieved container with groups:\n\n\(container.description)", minimumLogLevel: .verbose)
+            return container
         }
         catch let error as NSAttribeautifulError {
             DebugLogger.log(message: error.errorDescription)
             throw error
         }
+
     }
     
     /// Checks the document against the group container match pattern
@@ -50,7 +53,6 @@ class GroupContainerRetriever {
             else {
                 throw NSAttribeautifulError.groupMatchFailed
             }
-            
             let newGroup = Group(font: font, size: size, color: color)
             groups.append(newGroup)
         }

@@ -17,12 +17,12 @@ extension NSAttribeautifulTests {
         }
     }
     
-    func testDocumentWithNoGroupContainerReturnsError() {
+    func testDocumentWithNoGroupContainerThrowsError() {
         let document = NSAttribeautifulTests.noGroupContainerDocument
         XCTAssertTrue(parseDocument(document).error == .missingGroupContainer)
     }
     
-    func testDocumentIncorrectlyFormattedGroupContainerReturnsError() {
+    func testDocumentIncorrectlyFormattedGroupContainerThrowsError() {
         let document = NSAttribeautifulTests.incorrectlyFormattedContainerDocument
         XCTAssertTrue(parseDocument(document).error == .missingGroupContainer)
     }

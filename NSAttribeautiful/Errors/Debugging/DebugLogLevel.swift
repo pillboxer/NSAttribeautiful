@@ -12,7 +12,7 @@ public enum DebugLogLevel: Int {
     
     /// Receive no messages (not recommended)
     case none
-    /// Receive errors only (this is the default setting)
+    /// Receive errors only (default)
     case errors
     /// Receive all debugging messages
     case verbose

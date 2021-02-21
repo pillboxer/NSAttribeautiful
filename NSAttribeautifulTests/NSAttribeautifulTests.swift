@@ -10,7 +10,11 @@ import XCTest
 
 class NSAttribeautifulTests: XCTestCase {
     
-    let customTokens = [";", ":", "*", "(", "!", "#", "¢", "©", "-", "_", "=", "¡", "|"]
+    override class func setUp() {
+        NSAttribeautiful.debugLogLevel = .verbose
+    }
+    
+    let customTokens = [";", ":", "*", "(", "!", "#", "¢", "©", "-", "_", "=", "¡", "|", #"\"#]
         
     func testAttribeautifiedStringIsStyledCorrectly() {
         let document = "≤[AmericanTypewriter:123:green][Copperplate:12.3:blue]≥ This should not be affected but ≤this≥, ≤that≥ and ≤this≥ should."
@@ -37,6 +41,19 @@ class NSAttribeautifulTests: XCTestCase {
         
         let instance = NSAttribeautiful(document: document)
         XCTAssertEqual(try? instance.beautifiedDocument(), expected)
+    }
+    
+    func testIdenticalTokensThrowsError() {
+        let token = customTokens.randomElement()!
+        let instance = NSAttribeautiful(document: "", customPrefix: token, customSuffix: token)
+        do {
+            let _ = try instance.beautifiedDocument()
+        }
+        catch let error {
+            XCTAssertTrue(error as? NSAttribeautifulError == .identicalTokens)
+            return
+        }
+        XCTAssertFalse(true)
     }
 
     override func tearDown() {

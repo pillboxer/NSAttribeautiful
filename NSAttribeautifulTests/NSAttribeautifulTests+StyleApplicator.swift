@@ -16,7 +16,7 @@ extension NSAttribeautifulTests {
     private static let documentWithoutGroupContainer = "Here is a document"
     
     private static let strippedDocumentWithStandardTokens = "Here is a ≤document≥ that may or may not need to be ≤styled≥"
-    private static let strippedDocumentWithCustomTokens = "Here is a @document^ that may or may not need to be @styled^"
+    private static let strippedDocumentWithCustomTokens = "Here is a @document^ that may or may not need to be @@styled^"
     private static let strippedDocumentWithoutTokens = "Here is a document that may or may not need to be styled"
     
     func testStrippingADocumentWithGroupContainerStripsCorrectly() {
@@ -28,7 +28,7 @@ extension NSAttribeautifulTests {
     func testOutstandingTokensAreReplacedFromStrippedDocumentWithStandardTokens() {
         let expected = NSAttributedString(string: NSAttribeautifulTests.strippedDocumentWithoutTokens)
         let document = NSAttributedString(string: NSAttribeautifulTests.strippedDocumentWithStandardTokens)
-        let withoutTokens = StyleApplicator.replacingOutstandingTokensFrom(document)
+        let withoutTokens = StyleApplicator.replacingOutstandingTokensFrom(document, argumentCount: 2)
         XCTAssertEqual(expected, withoutTokens)
     }
     
@@ -37,7 +37,7 @@ extension NSAttribeautifulTests {
         RegexPattern.suffixToken = "^"
         let expected = NSAttributedString(string: NSAttribeautifulTests.strippedDocumentWithoutTokens)
         let document = NSAttributedString(string: NSAttribeautifulTests.strippedDocumentWithCustomTokens)
-        let withoutTokens = StyleApplicator.replacingOutstandingTokensFrom(document)
+        let withoutTokens = StyleApplicator.replacingOutstandingTokensFrom(document, argumentCount: 2)
         XCTAssertEqual(expected, withoutTokens)
     }
     

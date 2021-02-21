@@ -13,7 +13,8 @@ struct RegexPattern {
     /// The client selected prefix token (defaults to `≤`)
     static var prefixToken: String = "≤" {
         didSet {
-            if prefixToken.first != #"\"# {
+            DebugLogger.log(message: "Setting custom prefix to \(prefixToken)", minimumLogLevel: .verbose)
+            if prefixToken.count == 1 {
                 prefixToken = #"\\#(prefixToken)"#
             }
         }
@@ -21,7 +22,8 @@ struct RegexPattern {
     /// The client selected prefix token (defaults to `≥`)
     static var suffixToken: String = "≥" {
         didSet {
-            if suffixToken.first != #"\"# {
+            DebugLogger.log(message: "Setting custom prefix to \(suffixToken)", minimumLogLevel: .verbose)
+            if suffixToken.count == 1 {
                 suffixToken = #"\\#(suffixToken)"#
             }
         }

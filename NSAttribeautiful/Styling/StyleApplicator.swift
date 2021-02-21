@@ -13,7 +13,9 @@ class StyleApplicator {
     /// The finalized instance of an `NSAttributedString`. No more manipulations are performed after this function returns
     static func attributedString(from document: String, styles: [GroupStyle]) -> NSAttributedString {
         let stripped = stripContainer(from: document)
-        return applyGroupStyles(styles, to: stripped)
+        let attributed = applyGroupStyles(styles, to: stripped)
+        DebugLogger.log(message: "Beautified String:\n\n\(attributed)", minimumLogLevel: .verbose)
+        return attributed
     }
     
     /// Removes a `GroupContainer` from a `document`
@@ -45,22 +47,27 @@ class StyleApplicator {
                 let color = style.color ?? .black
                 let attributes = NSAttributedString.attributesWith(font: font, color: color)
                 let argument = String(strippedDocument[range])
+                DebugLogger.log(message: "Applying attributes \(attributes.description) to \(argument)\n", minimumLogLevel: .verbose)
                 let attributedString = NSAttributedString(string: argument, attributes: attributes)
                 attributed.replaceCharacters(in: match.range, with: attributedString)
             }
         }
-        return replacingOutstandingTokensFrom(attributed)
+        return replacingOutstandingTokensFrom(attributed, argumentCount: matches.count)
     }
     
     /// Replaces any outstanding prefixes or suffixes
-    static func replacingOutstandingTokensFrom(_ document: NSAttributedString) -> NSAttributedString {
+    static func replacingOutstandingTokensFrom(_ document: NSAttributedString, argumentCount: Int) -> NSAttributedString {
         let mutable = NSMutableAttributedString(attributedString: document)
         let pattern = RegexPattern.patternFor(.customTokens)
         let matches = RegexHelper.textCheckingResultsFor(pattern: pattern, in: document.string)
+        if matches.count != argumentCount * 2 {
+            DebugLogger.log(message: "⚠️ Token count mismatch, results may be unexpected ⚠️")
+        }
         for match in matches.reversed() {
             let blank = NSAttributedString(string: "")
             mutable.replaceCharacters(in: match.range, with: blank)
         }
+        DebugLogger.log(message: "Outstanding tokens replaced", minimumLogLevel: .verbose)
         return mutable
     }
     

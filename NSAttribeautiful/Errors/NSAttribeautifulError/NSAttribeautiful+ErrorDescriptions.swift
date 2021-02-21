@@ -17,25 +17,16 @@ extension NSAttribeautifulError {
         switch self {
         case.missingGroupContainer:
             return "Could not find a GroupContainer at the beginning of document."
-        case .moreThanOneGroupContainerFound:
-            return "More than one GroupContainer found in document."
         case .groupMatchFailed:
             return "Unable to match Group(s) in GroupContainer"
+        case .identicalTokens:
+            return "Custom prefix and custom suffix are identical."
         }
     }
     
     /// The full formatted error message
-    var errorDescription: String? {
-        let prefix: String
-        switch errorType {
-        case .groupContainerMatching:
-            prefix = "GROUPCONTAINER MATCHING ERROR"
-        case .groupMatching:
-            prefix = "GROUPMATCHING FORMATTING ERROR"
-        default:
-            prefix = "UNKNOWN ERROR"
-        }
-        return "\(prefix): \(rawDescription) | \(NSAttribeautifulError.usageMessage)"
+    var errorDescription: String {
+        return "🚨 \(rawDescription) | \(NSAttribeautifulError.usageMessage) 🚨"
     }
     
     

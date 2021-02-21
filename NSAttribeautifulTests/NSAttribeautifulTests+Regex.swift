@@ -106,7 +106,7 @@ extension NSAttribeautifulTests {
     
     func testArgumentsAreMatchedFromDocumentWithCustomTokens() {
         let randomPrefix = customTokens.randomElement()!
-        let randomSuffix = customTokens.randomElement()!
+        let randomSuffix = customTokens.filter { $0 != randomPrefix }.randomElement()!
         RegexPattern.prefixToken = randomPrefix
         RegexPattern.suffixToken = randomSuffix
         let expected = NSAttribeautifulTests.argumentsWithoutTokens

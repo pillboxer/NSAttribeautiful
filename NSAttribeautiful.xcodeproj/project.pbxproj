@@ -17,7 +17,6 @@
 		86300E1E25C7115C00BF0893 /* DebugLogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E0A25C7115C00BF0893 /* DebugLogLevel.swift */; };
 		86300E1F25C7115C00BF0893 /* NSAttribeautiful+ErrorDescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E0C25C7115C00BF0893 /* NSAttribeautiful+ErrorDescriptions.swift */; };
 		86300E2025C7115C00BF0893 /* NSAttribeautifulError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E0D25C7115C00BF0893 /* NSAttribeautifulError.swift */; };
-		86300E2125C7115C00BF0893 /* NSAttribeautifulErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E0E25C7115C00BF0893 /* NSAttribeautifulErrorType.swift */; };
 		86300E2225C7115C00BF0893 /* NSAttribeautiful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E1125C7115C00BF0893 /* NSAttribeautiful.swift */; };
 		86300E2325C7115C00BF0893 /* NSAttribeautiful+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E1225C7115C00BF0893 /* NSAttribeautiful+Debug.swift */; };
 		86300E2525C7115C00BF0893 /* RegexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E1525C7115C00BF0893 /* RegexHelper.swift */; };
@@ -67,7 +66,6 @@
 		86300E0A25C7115C00BF0893 /* DebugLogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugLogLevel.swift; sourceTree = "<group>"; };
 		86300E0C25C7115C00BF0893 /* NSAttribeautiful+ErrorDescriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttribeautiful+ErrorDescriptions.swift"; sourceTree = "<group>"; };
 		86300E0D25C7115C00BF0893 /* NSAttribeautifulError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttribeautifulError.swift; sourceTree = "<group>"; };
-		86300E0E25C7115C00BF0893 /* NSAttribeautifulErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttribeautifulErrorType.swift; sourceTree = "<group>"; };
 		86300E1125C7115C00BF0893 /* NSAttribeautiful.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttribeautiful.swift; sourceTree = "<group>"; };
 		86300E1225C7115C00BF0893 /* NSAttribeautiful+Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttribeautiful+Debug.swift"; sourceTree = "<group>"; };
 		86300E1525C7115C00BF0893 /* RegexHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexHelper.swift; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 			children = (
 				86300E0C25C7115C00BF0893 /* NSAttribeautiful+ErrorDescriptions.swift */,
 				86300E0D25C7115C00BF0893 /* NSAttribeautifulError.swift */,
-				86300E0E25C7115C00BF0893 /* NSAttribeautifulErrorType.swift */,
 			);
 			path = NSAttribeautifulError;
 			sourceTree = "<group>";
@@ -408,7 +405,6 @@
 				86300E1C25C7115C00BF0893 /* String+Extensions.swift in Sources */,
 				86300E1B25C7115C00BF0893 /* Group.swift in Sources */,
 				86300E1D25C7115C00BF0893 /* DebugLogger.swift in Sources */,
-				86300E2125C7115C00BF0893 /* NSAttribeautifulErrorType.swift in Sources */,
 				86300E2325C7115C00BF0893 /* NSAttribeautiful+Debug.swift in Sources */,
 				86300E2725C7115C00BF0893 /* RegexPattern.swift in Sources */,
 				8658CED525D1CC8F0048F840 /* NSAttribeautiful+Font.swift in Sources */,

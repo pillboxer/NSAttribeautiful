@@ -22,7 +22,7 @@ public class NSAttribeautiful {
         self.document = document
         self.customPrefix = customPrefix
         self.customSuffix = customSuffix
-        DebugLogger.log(message: "For usage info, please visit https://github.com/pillboxer/NSAttribeautiful", minimumLogLevel: .verbose)
+        DebugLogger.log(message: "For usage info, please visit https://github.com/pillboxer/NSAttribeautiful")
     }
     
     /// Applies the desired formatting to the document.
@@ -32,12 +32,19 @@ public class NSAttribeautiful {
         RegexPattern.prefixToken = customPrefix ?? RegexPattern.prefixToken
         RegexPattern.suffixToken = customSuffix ?? RegexPattern.suffixToken
         do {
+            try checkTokenLegality()
             let container = try GroupContainerRetriever.groupContainerFor(document)
             let styles = container.groups.map { GroupStyle(group: $0) }
             return StyleApplicator.attributedString(from: document, styles: styles)
         }
         catch let error {
             throw error
+        }
+    }
+    
+    private func checkTokenLegality() throws {
+        if RegexPattern.prefixToken == RegexPattern.suffixToken {
+            throw NSAttribeautifulError.identicalTokens
         }
     }
 }
