@@ -14,7 +14,7 @@ class NSAttribeautifulTests: XCTestCase {
         NSAttribeautiful.debugLogLevel = .verbose
     }
     
-    let customTokens = [";", ":", "*", "(", "!", "#", "¢", "©", "-", "_", "=", "¡", "|", #"\"#]
+    let customTokens: [Character] = [";", ":", "*", "(", "!", "#", "¢", "©", "-", "_", "=", "¡", "|", #"\"#]
         
     func testAttribeautifiedStringIsStyledCorrectly() {
         let document = "≤[AmericanTypewriter:123:green][Copperplate:12.3:blue]≥ This should not be affected but ≤this≥, ≤that≥ and ≤this≥ should."
@@ -57,8 +57,8 @@ class NSAttribeautifulTests: XCTestCase {
     }
 
     override func tearDown() {
-        RegexPattern.prefixToken = "≤"
-        RegexPattern.suffixToken = "≥"
+        RegexPattern.useCustomPrefix("≤")
+        RegexPattern.useCustomSuffix("≥")
         NSAttribeautiful.identifierFontMap = [:]
     }
 

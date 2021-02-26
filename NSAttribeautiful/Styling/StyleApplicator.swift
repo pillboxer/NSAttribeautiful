@@ -35,7 +35,7 @@ class StyleApplicator {
     
     /// Applies each `GroupStyle` to an argument in a document stripped of its container. If the number of arguments is greater than the number of `GroupStyle` instances, the last group style is applied
     static func applyGroupStyles(_ styles: [GroupStyle], to strippedDocument: String) -> NSAttributedString {
-        let pattern = RegexPattern.patternFor(.stylableArgument)
+        let pattern = RegexPattern.patternFor(.stylableArgumentMatch)
         let matches = RegexHelper.textCheckingResultsFor(pattern: pattern, in: strippedDocument)
         let attributed = NSMutableAttributedString(string: strippedDocument)
         for match in matches.reversed() {
@@ -58,7 +58,7 @@ class StyleApplicator {
     /// Replaces any outstanding prefixes or suffixes
     static func replacingOutstandingTokensFrom(_ document: NSAttributedString, argumentCount: Int) -> NSAttributedString {
         let mutable = NSMutableAttributedString(attributedString: document)
-        let pattern = RegexPattern.patternFor(.customTokens)
+        let pattern = RegexPattern.patternFor(.customTokensMatch)
         let matches = RegexHelper.textCheckingResultsFor(pattern: pattern, in: document.string)
         if matches.count != argumentCount * 2 {
             DebugLogger.log(message: "⚠️ Token count mismatch, results may be unexpected ⚠️")

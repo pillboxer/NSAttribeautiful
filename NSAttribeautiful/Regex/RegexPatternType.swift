@@ -21,9 +21,11 @@ enum MatchingAction {
     /// Matches the color in a group
     case colorMatch
     /// Matches the stylable argument in a group
-    case stylableArgument
+    case stylableArgumentMatch
     /// Matches any custom token, prefix or suffix
-    case customTokens
+    case customTokensMatch
+    /// Matches group indexes directly succeeding a stylable argument
+    case groupIndexMatch
     
     /// The string literal pattern to hand to `NSRegularExpression`
     var pattern: String {
@@ -38,10 +40,12 @@ enum MatchingAction {
             return RegexPattern.sizePattern
         case .colorMatch:
             return RegexPattern.colorPattern
-        case .stylableArgument:
-            return RegexPattern.styleableArgumentPattern
-        case .customTokens:
+        case .stylableArgumentMatch:
+            return RegexPattern.stylableArgumentPattern
+        case .customTokensMatch:
             return RegexPattern.customTokenPattern
+        case .groupIndexMatch:
+            return RegexPattern.groupIndexPattern
         }
     }
 }
@@ -83,8 +87,14 @@ fileprivate extension RegexPattern {
     
     /// The pattern for matching a single string to be styled from a document.
     /// The styled string must be enclosed in the client selected prefix tokens.
-    static var styleableArgumentPattern: String {
+    static var stylableArgumentPattern: String {
          #"(?<=\#(prefixToken))[^\#(prefixToken)\#(suffixToken)]+(?=\#(suffixToken))"#
+    }
+    
+    /// The pattern for matching a group index.
+    /// The end of the document must directly the index
+    static var groupIndexPattern: String {
+        #"(?<=\#(prefixToken)\[)\d+(?:,\d+)*(?=\]\#(suffixToken)\s*$)"#
     }
     
     /// The pattern for matching any custom token, prefix or suffix
