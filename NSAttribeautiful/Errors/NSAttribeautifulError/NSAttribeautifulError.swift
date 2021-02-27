@@ -16,5 +16,7 @@ enum NSAttribeautifulError: Equatable, LocalizedError {
     case groupMatchFailed
     // MARK: - Token Repetition
     case identicalTokens
+    // MARK: - Illegal Token
+    case illegalToken
     
 }

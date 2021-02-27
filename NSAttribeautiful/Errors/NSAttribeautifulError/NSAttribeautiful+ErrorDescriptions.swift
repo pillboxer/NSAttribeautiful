@@ -21,6 +21,8 @@ extension NSAttribeautifulError {
             return "Unable to match Group(s) in GroupContainer"
         case .identicalTokens:
             return "Custom prefix and custom suffix are identical."
+        case .illegalToken:
+            return "Illegal token used in either prefix or suffix"
         }
     }
     

@@ -32,17 +32,26 @@ public class NSAttribeautiful {
         RegexPattern.useCustomPrefix(customPrefix)
         RegexPattern.useCustomSuffix(customSuffix)
         do {
-            try checkTokenLegality()
+            try checkTokenLegality(prefix: customPrefix, suffix: customSuffix)
             let container = try GroupContainerRetriever.groupContainerFor(document)
             let styles = container.groups.map { GroupStyle(group: $0) }
             return StyleApplicator.attributedString(from: document, styles: styles)
         }
-        catch let error {
+        catch let error as NSAttribeautifulError  {
+            DebugLogger.log(message: error.errorDescription)
             throw error
         }
     }
     
-    private func checkTokenLegality() throws {
+    private func checkTokenLegality(prefix: Character?, suffix: Character?) throws {
+        if let prefix = prefix,
+           prefix.isIllegalToken {
+            throw NSAttribeautifulError.illegalToken
+        }
+        if let suffix = suffix,
+           suffix.isIllegalToken {
+            throw NSAttribeautifulError.illegalToken
+        }
         if RegexPattern.prefixToken == RegexPattern.suffixToken {
             throw NSAttribeautifulError.identicalTokens
         }

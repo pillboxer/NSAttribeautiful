@@ -13,5 +13,5 @@ extension String {
     func range() -> NSRange {
         NSRange(location: 0, length: count)
     }
-
+    
 }

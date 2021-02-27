@@ -20,8 +20,7 @@ class GroupContainerRetriever {
             DebugLogger.log(message: "Retrieved container with groups:\n\n\(container.description)", minimumLogLevel: .verbose)
             return container
         }
-        catch let error as NSAttribeautifulError {
-            DebugLogger.log(message: error.errorDescription)
+        catch let error {
             throw error
         }
 

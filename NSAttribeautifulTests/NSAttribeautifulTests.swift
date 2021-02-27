@@ -11,7 +11,7 @@ import XCTest
 class NSAttribeautifulTests: XCTestCase {
     
     static func documentWith(prefix: Character, suffix: Character) -> String {
-        "\(prefix)[bod:123:green][al:12.3:blue][cp:0.5:red]\(suffix) This should not be affected but \(prefix)this\(suffix), \(prefix)that\(suffix) and \(prefix)this\(suffix) should. \(prefix)[1,2,0]\(suffix)"
+        "\(prefix)[bod:123:green][Cochin:12.3:blue][cp:0.5:red]\(suffix) This should not be affected but \(prefix)this\(suffix), \(prefix)that\(suffix) and \(prefix)this\(suffix) should. \(prefix)[1,2,0]\(suffix)"
     }
 
     let customTokens: String = #"¡€#¢∞§¶•ªº!@£$%^&*()_œ∑´®†¥¨^øπ“‘«\|æ…¬˚∆˙©ƒ∂ßå:;#"Ω≈ç√∫~µ≤≥÷?/¨"#
@@ -29,13 +29,12 @@ class NSAttribeautifulTests: XCTestCase {
         print(suffix)
         
         NSAttribeautiful.identifyAbbreviation("bod", withFont: "BodoniSvtyTwoITCTT-Book")
-        NSAttribeautiful.identifyAbbreviation("al", withFont: "Avenir-Light")
         NSAttribeautiful.identifyAbbreviation("cp", withFont: "Copperplate")
         
         let expected = NSMutableAttributedString(string: "This should not be affected but this, that and this should.")
         
         let firstFont = FontHelper.fontWith(name: "BodoniSvtyTwoITCTT-Book", size: 123)
-        let secondFont = FontHelper.fontWith(name: "Avenir-Light", size: 12.3)
+        let secondFont = FontHelper.fontWith(name: "Cochin", size: 12.3)
         let thirdFont = FontHelper.fontWith(name: "Copperplate", size: 0.5)
         
         let firstColor = FontHelper.colorWith(name: "green")
@@ -69,6 +68,34 @@ class NSAttribeautifulTests: XCTestCase {
         }
         catch let error {
             XCTAssertTrue(error as? NSAttribeautifulError == .identicalTokens)
+            return
+        }
+        XCTAssertFalse(true)
+    }
+    
+    func testIllegalPrefixThrowsError() {
+        NSAttribeautiful.debugLogLevel = .verbose
+        let token: Character = #"\"#
+        let instance = NSAttribeautiful(document: "", customPrefix: token, customSuffix: ")")
+        do {
+            let _ = try instance.beautifiedDocument()
+        }
+        catch let error {
+            XCTAssertTrue(error as? NSAttribeautifulError == .illegalToken)
+            return
+        }
+        XCTAssertFalse(true)
+    }
+    
+    func testIllegalSuffixThrowsError() {
+        NSAttribeautiful.debugLogLevel = .verbose
+        let token: Character = #"\"#
+        let instance = NSAttribeautiful(document: "", customPrefix: "(", customSuffix: token)
+        do {
+            let _ = try instance.beautifiedDocument()
+        }
+        catch let error {
+            XCTAssertTrue(error as? NSAttribeautifulError == .illegalToken)
             return
         }
         XCTAssertFalse(true)

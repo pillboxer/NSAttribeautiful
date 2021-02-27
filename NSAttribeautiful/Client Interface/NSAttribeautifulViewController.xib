@@ -10,8 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NSAttribeautifulViewController" customModule="NSAttribeautiful" customModuleProvider="target">
             <connections>
-                <outlet property="beautifiedLabel" destination="jTn-Ge-6pR" id="4oB-8y-OBf"/>
-                <outlet property="documentLabel" destination="pR5-l7-i4o" id="8Gg-5s-Ve9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,30 +17,8 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTn-Ge-6pR">
-                    <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pR5-l7-i4o">
-                    <rect key="frame" x="32" y="108" width="350" height="16"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="pR5-l7-i4o" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="Bon-Ee-zBI"/>
-                <constraint firstItem="jTn-Ge-6pR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="T8B-Cy-6Ee"/>
-                <constraint firstItem="jTn-Ge-6pR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Uq0-Am-yLH"/>
-                <constraint firstItem="pR5-l7-i4o" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="ey5-di-buE"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pR5-l7-i4o" secondAttribute="trailing" constant="32" id="gTo-Wu-0aD"/>
-                <constraint firstItem="pR5-l7-i4o" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kYD-Pv-bUa"/>
-            </constraints>
             <point key="canvasLocation" x="139" y="122"/>
         </view>
     </objects>
