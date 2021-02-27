@@ -3,8 +3,8 @@ import XCTest
 
 extension NSAttribeautifulTests {
     
-    private static let groupIndexArguments = "0,1,2,3,4"
-    private static let documentWithStandardTokens = "≤[myFont:123:green][anotherFont:12.3:blue]≥ This should not be affected but ≤this≥, ≤that≥ and ≤this≥ should. ≤[\(groupIndexArguments)]≥"
+    private static let groupIndexArguments = "[0,1,2,3,4]"
+    private static let documentWithStandardTokens = "≤[myFont:123:green][anotherFont:12.3:blue]≥ This should not be affected but ≤this≥, ≤that≥ and ≤this≥ should. ≤\(groupIndexArguments)≥"
     private static let containerWithStandardTokens = "≤[myFont:123:green][anotherFont:12.3:blue]≥"
     
     private static let groupsWithoutTokens = ["[myFont:123:green]","[anotherFont:12.3:blue]"]
@@ -69,13 +69,21 @@ extension NSAttribeautifulTests {
         XCTAssertEqual(match, expected)
     }
     
+    func testExtraneousWhitespaceIsMatchedFromDocument() {
+        let expected = "          "
+        let document = "Here is a document          "
+        let pattern = RegexPattern.patternFor(.extraneousWhitespaceMatch)
+        let match = RegexHelper.firstMatchFor(pattern: pattern, in: document)
+        XCTAssertEqual(expected, match)
+    }
+    
 }
 
 // MARK: - Custom Token Tests
 extension NSAttribeautifulTests {
     
     private func documentWithCustomTokens(prefix: Character, suffix: Character) -> String {
-        "\(prefix)[myFont:123:green][anotherFont:12.3:blue]\(suffix) This should not be affected but \(prefix)this\(suffix), \(prefix)that\(suffix) and \(prefix)this\(suffix) should. \(prefix)[\(NSAttribeautifulTests.groupIndexArguments)]\(suffix)"
+        "\(prefix)[myFont:123:green][anotherFont:12.3:blue]\(suffix) This should not be affected but \(prefix)this\(suffix), \(prefix)that\(suffix) and \(prefix)this\(suffix) should. \(prefix)\(NSAttribeautifulTests.groupIndexArguments)\(suffix)"
     }
     
     private func containerWithCustomTokens(prefix: Character, suffix: Character) -> String {

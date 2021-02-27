@@ -39,7 +39,7 @@ class GroupContainerRetriever {
     /// Retrieves a number of `Group` items that will be applied to the document
     private static func parseGroups(from container: String) throws -> [Group] {
         let pattern = RegexPattern.patternFor(.groupsMatch)
-        let matches = RegexHelper.matchesFor(pattern: pattern, in: container)
+        let matches = RegexHelper.matchesFor(pattern: pattern, in: container)   
         var groups: [Group] = []
         
         for match in matches {

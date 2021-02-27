@@ -26,6 +26,8 @@ enum MatchingAction {
     case customTokensMatch
     /// Matches group indexes directly succeeding a stylable argument
     case groupIndexMatch
+    /// Matches extraneous whitespace at the end of a document
+    case extraneousWhitespaceMatch
     
     /// The string literal pattern to hand to `NSRegularExpression`
     var pattern: String {
@@ -46,6 +48,8 @@ enum MatchingAction {
             return RegexPattern.customTokenPattern
         case .groupIndexMatch:
             return RegexPattern.groupIndexPattern
+        case .extraneousWhitespaceMatch:
+            return RegexPattern.extraneousWhitespacePattern
         }
     }
 }
@@ -92,14 +96,19 @@ fileprivate extension RegexPattern {
     }
     
     /// The pattern for matching a group index.
-    /// The end of the document must directly the index
+    /// The end of the document must directly succeed the index
     static var groupIndexPattern: String {
-        #"(?<=\#(prefixToken)\[)\d+(?:,\d+)*(?=\]\#(suffixToken)\s*$)"#
+        #"(?<=\#(prefixToken))\[\d+(?:,\d+)*\](?=\#(suffixToken)\s*$)"#
     }
     
     /// The pattern for matching any custom token, prefix or suffix
     static var customTokenPattern: String {
         #"[\#(prefixToken)\#(suffixToken)]"#
+    }
+    
+    /// The pattern for removing any whitespace before the end of a document
+    static var extraneousWhitespacePattern: String {
+        #"\s+$"#
     }
     
 }
