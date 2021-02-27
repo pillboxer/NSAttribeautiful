@@ -35,6 +35,7 @@
 		8658CED525D1CC8F0048F840 /* NSAttribeautiful+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CED425D1CC8F0048F840 /* NSAttribeautiful+Font.swift */; };
 		8658CEE325D1CF020048F840 /* NSAttribeautifulTests+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CEE225D1CF020048F840 /* NSAttribeautifulTests+Font.swift */; };
 		8658CEE925D1D0880048F840 /* GroupStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CEE825D1D0880048F840 /* GroupStyle.swift */; };
+		865DE89925EA39DA00576613 /* GroupIndexContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DE89825EA39DA00576613 /* GroupIndexContainer.swift */; };
 		8664997425E14BC40094CBF5 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8664997325E14BC40094CBF5 /* FontHelper.swift */; };
 		8664997725E14FAF0094CBF5 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8664996725E14A620094CBF5 /* UIColor+Extensions.swift */; platformFilter = ios; };
 		8664998025E150470094CBF5 /* NSColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8664996B25E14ACA0094CBF5 /* NSColor+Extensions.swift */; };
@@ -83,6 +84,7 @@
 		8658CED425D1CC8F0048F840 /* NSAttribeautiful+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautiful+Font.swift"; sourceTree = "<group>"; };
 		8658CEE225D1CF020048F840 /* NSAttribeautifulTests+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+Font.swift"; sourceTree = "<group>"; };
 		8658CEE825D1D0880048F840 /* GroupStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupStyle.swift; sourceTree = "<group>"; };
+		865DE89825EA39DA00576613 /* GroupIndexContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupIndexContainer.swift; sourceTree = "<group>"; };
 		8664996725E14A620094CBF5 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		8664996B25E14ACA0094CBF5 /* NSColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Extensions.swift"; sourceTree = "<group>"; };
 		8664997325E14BC40094CBF5 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				86300E0325C7115C00BF0893 /* GroupContainer.swift */,
 				86300E0425C7115C00BF0893 /* Group.swift */,
 				8658CEE825D1D0880048F840 /* GroupStyle.swift */,
+				865DE89825EA39DA00576613 /* GroupIndexContainer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				865DE89925EA39DA00576613 /* GroupIndexContainer.swift in Sources */,
 				8664998025E150470094CBF5 /* NSColor+Extensions.swift in Sources */,
 				8664997725E14FAF0094CBF5 /* UIColor+Extensions.swift in Sources */,
 				86553A5225E11FE0004F0AE4 /* NSAttribeautifulViewController.xib in Sources */,

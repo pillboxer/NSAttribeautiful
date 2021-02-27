@@ -10,8 +10,20 @@ import Foundation
 /// Provides easy access to regex patterns for different types of format matching
 struct RegexPattern {
     
+    static func useCustomPrefix(_ prefix: Character?) {
+        if let prefix = prefix {
+            prefixToken = String(prefix)
+        }
+    }
+    
+    static func useCustomSuffix(_ suffix: Character?) {
+        if let suffix = suffix {
+            suffixToken = String(suffix)
+        }
+    }
+    
     /// The client selected prefix token (defaults to `≤`)
-    static var prefixToken: String = "≤" {
+    private(set) static var prefixToken: String = "≤" {
         didSet {
             DebugLogger.log(message: "Setting custom prefix to \(prefixToken)", minimumLogLevel: .verbose)
             if prefixToken.count == 1 {
@@ -20,7 +32,7 @@ struct RegexPattern {
         }
     }
     /// The client selected prefix token (defaults to `≥`)
-    static var suffixToken: String = "≥" {
+    private(set) static var suffixToken: String = "≥" {
         didSet {
             DebugLogger.log(message: "Setting custom prefix to \(suffixToken)", minimumLogLevel: .verbose)
             if suffixToken.count == 1 {
