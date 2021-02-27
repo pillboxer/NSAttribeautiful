@@ -31,13 +31,13 @@ extension NSAttribeautifulTests {
     func testOutstandingTokensAreReplacedFromStrippedDocumentWithStandardTokens() {
         let expected = NSAttributedString(string: NSAttribeautifulTests.strippedDocumentWithoutTokens)
         let document = NSAttributedString(string: NSAttribeautifulTests.strippedDocumentWithStandardTokens)
-        let withoutTokens = StyleApplicator.cleanupExtraneousElementsFrom(document, argumentCount: 5)
+        let withoutTokens = StyleApplicator.cleanupExtraneousElementsFrom(document, argumentCount: 5    )
         XCTAssertEqual(expected, withoutTokens)
     }
     
     func testOustandingTokensAreReplacedFromStrippedDocumentWithCustomTokens() {
         let prefix = customTokens.randomElement()!
-        let suffix = customTokens.randomElement()!
+        let suffix = customTokenNotIncluding(prefix)
         RegexPattern.useCustomPrefix(prefix)
         RegexPattern.useCustomSuffix(suffix)
         let expected = NSAttributedString(string: NSAttribeautifulTests.strippedDocumentWithoutTokens)
@@ -60,7 +60,7 @@ extension NSAttribeautifulTests {
     
     func testCorrectGroupIndexesAreReturnedFromStrippedDocument() {
         let prefix = customTokens.randomElement()!
-        let suffix = customTokens.filter { $0 != prefix }.randomElement()!
+        let suffix = customTokenNotIncluding(prefix)
         RegexPattern.useCustomPrefix(prefix)
         RegexPattern.useCustomSuffix(suffix)
         let document = NSAttribeautifulTests.strippedDocumentWithCustomTokens(prefix: prefix, suffix: suffix)

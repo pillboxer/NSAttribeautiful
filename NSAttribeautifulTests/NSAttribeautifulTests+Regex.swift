@@ -96,7 +96,7 @@ extension NSAttribeautifulTests {
     
     func testGroupContainerIsMatchedFromDocumentWithCustomTokens() {
         let randomPrefix = customTokens.randomElement()!
-        let randomSuffix = customTokens.randomElement()!
+        let randomSuffix = customTokenNotIncluding(randomPrefix)
         let instance = NSAttribeautiful(document: "", customPrefix: randomPrefix, customSuffix: randomSuffix)
         let _ = try? instance.beautifiedDocument()
         let expected = containerWithCustomTokens(prefix: randomPrefix, suffix: randomSuffix)
@@ -108,7 +108,7 @@ extension NSAttribeautifulTests {
     
     func testCustomTokensAreEscaped() {
         let prefix = customTokens.randomElement()!
-        let suffix = customTokens.randomElement()!
+        let suffix = customTokenNotIncluding(prefix)
         let expected = [#"\\#(prefix)"#, #"\\#(suffix)"#]
         RegexPattern.useCustomPrefix(prefix)
         RegexPattern.useCustomSuffix(suffix)
@@ -117,7 +117,7 @@ extension NSAttribeautifulTests {
     
     func testGroupContainerMatchPatternIsCorrectAfterConfiguringCustomTokens() {
         let prefix = customTokens.randomElement()!
-        let suffix = customTokens.randomElement()!
+        let suffix = customTokenNotIncluding(prefix)
         let expected = #"^\\#(prefix)(?:\[\w+:\d+\.?\d*:\w+\])+\\#(suffix)"#
         RegexPattern.useCustomPrefix(prefix)
         RegexPattern.useCustomSuffix(suffix)
@@ -127,7 +127,7 @@ extension NSAttribeautifulTests {
     
     func testArgumentsAreMatchedFromDocumentWithCustomTokens() {
         let prefix = customTokens.randomElement()!
-        let suffix = customTokens.filter { $0 != prefix }.randomElement()!
+        let suffix = customTokenNotIncluding(prefix)
         RegexPattern.useCustomPrefix(prefix)
         RegexPattern.useCustomSuffix(suffix)
         let expected = NSAttribeautifulTests.argumentsWithoutTokens
@@ -140,7 +140,7 @@ extension NSAttribeautifulTests {
     func testGroupIndexesAreMatchedFromArgumentsInDocumentWithCustomTokens() {
         let expected = NSAttribeautifulTests.groupIndexArguments
         let prefix = customTokens.randomElement()!
-        let suffix = customTokens.filter { $0 != prefix }.randomElement()!
+        let suffix = customTokenNotIncluding(prefix)
         RegexPattern.useCustomPrefix(prefix)
         RegexPattern.useCustomSuffix(suffix)
         let document = documentWithCustomTokens(prefix: prefix, suffix: suffix)
