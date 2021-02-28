@@ -10,7 +10,7 @@ NSAttribeautiful is an iOS and MacOS framework that provides an easy way of usin
 
 2. Choose a pair of unique _tokens_ that will enclose any NSAttribeautiful arguments. By default the prefix token is `≤` and the suffix token `≥`. All examples in this README will use the default tokens.
 
-3. Define the _GroupContainer_ and it must be present at the beginning of any document. Each _Group_ within the group container is enclosed by brackets and follows the format `fontName:fontSize:fontColor`:
+3. Define the _GroupContainer_ and add it to the beginning of any document. Each _Group_ within the container is enclosed by brackets and follows the format `fontName:fontSize:fontColor`:
 
 <p align="center"><code>≤[Copperplate:12:blue][Arial:8:red]≥ Here is my document that needs to be formatted`</code></p>
 
