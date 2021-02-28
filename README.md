@@ -12,5 +12,5 @@ NSAttribeautiful is an iOS and MacOS framework that provides an easy way of usin
 
 4. Enclose any words that should styled with your unique tokens `≤[Copperplate:12:blue][Arial:8:red]≥ Here is my ≤document≥ that ≤needs≥ to be ≤formatted≥`
 
-![NSGIF](https://dl.dropboxusercontent.com/s/0rq3fr0dtpvwd4h/NSGIF-header.png?dl=0)
+![NSGIF](/Assets/formatted0.png)
 
