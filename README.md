@@ -11,3 +11,5 @@ NSAttribeautiful is an iOS and MacOS framework that provides an easy way of usin
 3. Define any styles that will be used in the format `≤[myFirstFont:myFirstSize:myFirstColor][mySecondFont:mySecondSize:mySecondColor]≥`. This is known as the _GroupContainer_ and it must be present at the beginning of any document. (`≤[Copperplate:12:blue][Arial:8:red]≥ Here is my document that needs to be formatted`)
 
 4. Enclose any words that should styled with your unique tokens `≤[Copperplate:12:blue][Arial:8:red]≥ Here is my ≤document≥ that ≤needs≥ to be ≤formatted≥`
+
+[formatted0](/Assets/formatted0.png)
