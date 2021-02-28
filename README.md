@@ -23,9 +23,9 @@ NSAttribeautiful is an iOS and MacOS framework that provides an easy way of usin
 
 5. By default, each _Group_ will be applied to an _Argument_ once before moving on to the next one. If there are more _Groups_ than _Arguments_, the last _Group_ will be applied to any extra arguments. You can override this by adding a _GroupIndexContainer_ to the end of your document. 
 
-This is similar to the _GroupContainer_ but enclosed in the brackets are indexes of the _Group_ you wish to apply to a particular _Argument_. Each index must be separated by a comma.
+  This is similar to the _GroupContainer_ but enclosed in the brackets are indexes of the _Group_ you wish to apply to a particular _Argument_. Each index must be separated by a comma.
 
-In the example below, _Group_ '0' (Copperplate) will be applied to the first and second arguments ("document" & "needs") and _Group_ '1' will be applied to the last argument.
+  In the example below, _Group_ '0' (Copperplate) will be applied to the first and second arguments ("document" & "needs") and _Group_ '1' will be applied to the last argument.
 
 <p align="center">
   <code>≤[Copperplate:18:blue][Arial:18:red]≥ Here is my ≤document≥ that ≤needs≥ to be ≤formatted≥ ≤[0,0,1]≥</code>
