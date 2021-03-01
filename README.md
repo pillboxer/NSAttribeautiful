@@ -56,8 +56,8 @@ Out of the box, NSAttribeautiful supports the system variants of blue, green, in
 2. Identify any _Abbreviations_ 
 
 <p align="center">
-  <code>NSAttribeautiful.identifyAbbreviation("tnf", withFont: "Times New Roman")</code>
-  <code>NSAttribeautiful.identifyAbbreviation("mcf", withFont: "My Custom Font")</code>
+  <pre><code>NSAttribeautiful.identifyAbbreviation("tnf", withFont: "Times New Roman")
+  NSAttribeautiful.identifyAbbreviation("mcf", withFont: "My Custom Font")</code></pre>
 </p>
 
 3. Initialize an instance of `NSAttribeautiful`
