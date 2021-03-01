@@ -27,3 +27,20 @@ NSAttribeautiful is an iOS and MacOS framework that provides an easy way of usin
   <code>≤[Copperplate:18:blue][Arial:18:red]≥ Here is my ≤document≥ that ≤needs≥ to be ≤formatted≥ ≤[0,0,1]≥</code>
   <img src="/Assets/formatted1.png" />
 </p>
+
+## Considerations
+
+#### GroupContainers
+
+##### Font
+Fonts within a _GroupContainer_ may contain alphabetic characters only. If your target font contains a numeric, special or any other character (including a space) you can define an _Abbreviation_. For example, if you want to use `Times New Roman` in your document, add the font abbreviation to your code by calling 
+
+<p align="center">
+  <code>NSAttribeautiful.identifyAbbreviation("tnf", withFont: "Times New Roman")</code>
+</p>
+
+#### Size
+Font sizes can be integers (`12`) or decimal numbers (`12.3`)
+
+#### Color
+Out of the box, NSAttribeautiful supports the system variants of blue, green, indigo, orange, red and yellow. You can easily override these or define your own by adding a new Color Set with the target color name in your assets file.
