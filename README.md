@@ -63,4 +63,4 @@ do {
 
 ## Debugging
 
-NSAttribeautiful can log information about string transformations to the console. You can choose the amount of information to receive by setting  `NSAttribeautiful.debugLogLevel` to either `.none`, `.errors` (default), `.verbose`
+NSAttribeautiful can log information about string transformations to the console. You can choose the amount of information to receive by setting  `NSAttribeautiful.debugLogLevel` to either `.none`, `.errors` (default), or `.verbose`
