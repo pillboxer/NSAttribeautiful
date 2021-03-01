@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "NSAttribeautiful"
-  spec.version      = "master"
+  spec.version      = "1.0.0"
   spec.summary      = "Easy Attributed Strings"
 
   # This description is used to generate tags and improve search results.
