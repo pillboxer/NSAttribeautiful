@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
 "NSAttribeautiful is an iOS and MacOS framework that provides an easy way of using multiple styles (fonts, sizes and colors) in one string"
  DESC
 
-  spec.homepage     = "http://www.github.com/pillboxer/NSAttribeautiful"
+  spec.homepage     = "https://www.github.com/pillboxer/NSAttribeautiful"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -64,8 +64,7 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-   spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+   spec.platform     = :ios, "14.3"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -80,7 +79,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://github.com/pillboxer/NSAttribeautiful.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/pillboxer/NSAttribeautiful.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +90,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{swift}"
+  spec.source_files  = "NSAttribeautiful/**/*.{swift}"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
