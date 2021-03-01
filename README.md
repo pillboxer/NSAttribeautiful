@@ -48,8 +48,6 @@ Out of the box, NSAttribeautiful supports the system variants of blue, green, in
 ## Usage
 <p align="center"><pre><code>
 
-let document = "≤[mcf:8.5:blue][tnf:18:red]≥ My ≤awesome≥ ≤document≥"
-
 NSAttribeautiful.identifyAbbreviation("tnf", withFont: "Times New Roman")
 NSAttribeautiful.identifyAbbreviation("mcf", withFont: "My Custom Font")
 
