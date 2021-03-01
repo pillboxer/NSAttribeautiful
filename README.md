@@ -69,9 +69,13 @@ Out of the box, NSAttribeautiful supports the system variants of blue, green, in
 4. Retrieve the `NSAttributedString` 
 
 <p align="center">
-  <pre><code>do 
-    let somet
-  
+  <pre><code>do {
+    let beautified = try attribeautiful.beautifiedDocument()
+    // Do something...
+  }
+  catch let error {
+    // Handle error
+  }
   </code></pre>
 </p>
 
