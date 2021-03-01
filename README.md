@@ -46,7 +46,9 @@ Font sizes can be integers (`12`) or decimal numbers (`12.3`)
 Out of the box, NSAttribeautiful supports the system variants of blue, green, indigo, orange, red and yellow. You can easily override these or define your own by adding a new Color Set with the target color name in your assets file.
 
 ## Usage
-<p align="center"><pre><code>let document = "≤[mcf:8.5:blue][tnf:18:red]≥ My ≤awesome≥ ≤document≥"
+<p align="center"><pre><code>
+
+let document = "≤[mcf:8.5:blue][tnf:18:red]≥ My ≤awesome≥ ≤document≥"
 
 NSAttribeautiful.identifyAbbreviation("tnf", withFont: "Times New Roman")
 NSAttribeautiful.identifyAbbreviation("mcf", withFont: "My Custom Font")
