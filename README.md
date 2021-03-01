@@ -12,7 +12,7 @@ NSAttribeautiful is an iOS and MacOS framework that provides an easy way of usin
 
 3. Define the _GroupContainer_ and add it to the beginning of any document. Each _Group_ within the container is enclosed by brackets and follows the format `fontName:fontSize:fontColor`:
 
-<p align="center"><code>≤[Copperplate:18:blue][Arial:18:red]≥ Here is my document that needs to be formatted`</code></p>
+<p align="center"><code>≤[Copperplate:18:blue][Arial:18:red]≥ Here is my document that needs to be formatted</code></p>
 
 4. Enclose any words (_Arguments_) that should styled with your unique tokens 
 
@@ -44,3 +44,34 @@ Font sizes can be integers (`12`) or decimal numbers (`12.3`)
 
 #### Color
 Out of the box, NSAttribeautiful supports the system variants of blue, green, indigo, orange, red and yellow. You can easily override these or define your own by adding a new Color Set with the target color name in your assets file.
+
+## Usage
+
+1. Define your document:
+
+<p align="center">
+  <code>let document = "≤[mcf:8.5:blue][tnf:18:red]≥ My ≤awesome≥ ≤document≥"</code>
+</p>
+
+2. Identify any _Abbreviations_ 
+
+<p align="center">
+  <code>NSAttribeautiful.identifyAbbreviation("tnf", withFont: "Times New Roman")</code>\n
+  <code>NSAttribeautiful.identifyAbbreviation("mcf", withFont: "My Custom Font")</code>
+</p>
+
+3. Initialize an instance of `NSAttribeautiful`
+
+<p align="center">
+  <code>let attribeautiful = NSAttribeautiful(document: document)</code>
+</p>
+
+4. Retrieve the `NSAttributedString` 
+
+<p align="center">
+  <code>do 
+    let somet
+  
+  </code>
+</p>
+
