@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Assets.car</key>
 		<data>
-		lIvcpZ8zPNyaxdGDeyfYnKEBJEY=
+		yRuI/LN2EfX1+MYy7mqKbfFWDr0=
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
@@ -40,14 +40,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WwfzUTYFbl7kv/c97qHUe5VE3/hLKVupTBR3KXcipJc=
+			beF0LuBf0Uy/pE0t+QJtWBDx6QjrDanLw6XjQlU9m9g=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/arm64-apple-macos.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uydnL4Xs8oGlWGqSj7Zvv9zy60XykuCSxLZc8SJOvKo=
+			r6pcTQXCBaLveMZgJZatmstkLgTaM0TJCuSEiHJNs5c=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/arm64.swiftdoc</key>
@@ -61,14 +61,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WwfzUTYFbl7kv/c97qHUe5VE3/hLKVupTBR3KXcipJc=
+			beF0LuBf0Uy/pE0t+QJtWBDx6QjrDanLw6XjQlU9m9g=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uydnL4Xs8oGlWGqSj7Zvv9zy60XykuCSxLZc8SJOvKo=
+			r6pcTQXCBaLveMZgJZatmstkLgTaM0TJCuSEiHJNs5c=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/x86_64-apple-macos.swiftdoc</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tgON5mcnCr5D4wlWs2BeqRwU54rybVvV1ceDEGugOz8=
+			qE3VbcMZ6Ujap/gIwPdhvtHbWk4ObGrA+AJ6D3eDpYE=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/x86_64-apple-macos.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yVZ38vbiYNfabi/+T7R0JptA9tqd2eFJpS9iUX3ZLAM=
+			TVK1GIBkkLyqv7kSrZM/woExFYnJBeg6c7chqQprGEc=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/x86_64.swiftdoc</key>
@@ -103,14 +103,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tgON5mcnCr5D4wlWs2BeqRwU54rybVvV1ceDEGugOz8=
+			qE3VbcMZ6Ujap/gIwPdhvtHbWk4ObGrA+AJ6D3eDpYE=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yVZ38vbiYNfabi/+T7R0JptA9tqd2eFJpS9iUX3ZLAM=
+			TVK1GIBkkLyqv7kSrZM/woExFYnJBeg6c7chqQprGEc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -124,7 +124,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			99e0R17MInDACZ86lw0OXzdiirBAFe/D8HEqqMMfvrg=
+			lvla8mva9NgFemX9M0k7M4NEuT9Qj/E8NAABkUaVO1I=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
