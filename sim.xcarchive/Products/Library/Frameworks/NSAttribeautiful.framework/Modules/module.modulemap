@@ -1,0 +1,11 @@
+framework module NSAttribeautiful {
+  umbrella header "NSAttribeautiful.h"
+
+  export *
+  module * { export * }
+}
+
+module NSAttribeautiful.Swift {
+    header "NSAttribeautiful-Swift.h"
+    requires objc
+}

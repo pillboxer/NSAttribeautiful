@@ -3,14 +3,13 @@ import XCTest
 
 extension NSAttribeautifulTests {
     
+    private static let documentWithStandardTokens = #"≤[myFont:123:green][anotherFont:12.3:blue][spacing:20]≥ This should not be affected but \n\n≤this≥, ≤that≥ and ≤this≥ should. ≤\#(groupIndexArguments)≥"#
+    
     private static let groupIndexArguments = "[0,1,2,3,4]"
-    private static let documentWithStandardTokens = "≤[myFont:123:green][anotherFont:12.3:blue]≥ This should not be affected but ≤this≥, ≤that≥ and ≤this≥ should. ≤\(groupIndexArguments)≥"
-    private static let containerWithStandardTokens = "≤[myFont:123:green][anotherFont:12.3:blue]≥"
-    
+    private static let containerWithStandardTokens = "≤[myFont:123:green][anotherFont:12.3:blue][spacing:20]≥"
+    private static let containerSpacing = "[spacing:20]"
     private static let groupsWithoutTokens = ["[myFont:123:green]","[anotherFont:12.3:blue]"]
-    
     private static let strippedDocumentWithStandardTokens = "This should not be affected but ≤this≥, ≤that≥ and ≤this≥ should."
-    
     private static let argumentsWithoutTokens = ["this", "that", "this"]
     
     func testGroupContainerIsMatchedFromDocument() {
@@ -61,7 +60,7 @@ extension NSAttribeautifulTests {
         XCTAssertEqual(match, expected)
     }
     
-    func testGroupIndexesAreMatchedFromArgumentsInDocument() {
+    func testGroupIndexesAreMatchedFromArgumentsFromDocument() {
         let expected = NSAttribeautifulTests.groupIndexArguments
         let document = NSAttribeautifulTests.documentWithStandardTokens
         let pattern = RegexPattern.patternFor(.groupIndexMatch)
@@ -73,6 +72,14 @@ extension NSAttribeautifulTests {
         let expected = "          "
         let document = "Here is a document          "
         let pattern = RegexPattern.patternFor(.extraneousWhitespaceMatch)
+        let match = RegexHelper.firstMatchFor(pattern: pattern, in: document)
+        XCTAssertEqual(expected, match)
+    }
+    
+    func testLineSpacingIsMatchedFromDocument() {
+        let expected = NSAttribeautifulTests.containerSpacing
+        let document = NSAttribeautifulTests.documentWithStandardTokens
+        let pattern = RegexPattern.patternFor(.lineSpaceMatch)
         let match = RegexHelper.firstMatchFor(pattern: pattern, in: document)
         XCTAssertEqual(expected, match)
     }
@@ -118,7 +125,7 @@ extension NSAttribeautifulTests {
     func testGroupContainerMatchPatternIsCorrectAfterConfiguringCustomTokens() {
         let prefix = customTokens.randomElement()!
         let suffix = customTokenNotIncluding(prefix)
-        let expected = #"^\\#(prefix)(?:\[\w+:\d+\.?\d*:\w+\])+\\#(suffix)"#
+        let expected = #"^\\#(prefix)(?:\[\w+:\d+\.?\d*:\w+\])+(\[spacing:\d+\])?\\#(suffix)"#
         RegexPattern.useCustomPrefix(prefix)
         RegexPattern.useCustomSuffix(suffix)
         let pattern = MatchingAction.groupContainerMatch.pattern

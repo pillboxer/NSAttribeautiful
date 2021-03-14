@@ -10,6 +10,7 @@ import Foundation
 /// Found at the beginning of correctly formatted documents, a `GroupContainer` holds a variable amount of `Group` objects
 struct GroupContainer: CustomStringConvertible {
     let groups: [Group]
+    let lineSpacing: Int
     
     var description: String {
         var string = ""

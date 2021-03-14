@@ -11,7 +11,7 @@ import XCTest
 class NSAttribeautifulTests: XCTestCase {
     
     static func documentWith(prefix: Character, suffix: Character) -> String {
-        "\(prefix)[bod:123:green][al:12.3:blue][cp:0.5:red]\(suffix) This should not be affected but \(prefix)this\(suffix), \(prefix)that\(suffix) and \(prefix)this\(suffix) should. \(prefix)[1,2,0]\(suffix)"
+        "\(prefix)[bod:123:green][al:12.3:blue][cp:0.5:red][spacing:21]\(suffix) This should not be affected but \(prefix)this\(suffix), \(prefix)that\(suffix) and \(prefix)this\(suffix) should. \(prefix)[1,2,0]\(suffix)"
     }
 
     let customTokens: String = #"¡€#¢∞§¶•ªº!@£$%^&*()_œ∑´®†¥¨^øπ“‘«\|æ…¬˚∆˙©ƒ∂ßå:;#"Ω≈ç√∫~µ≤≥÷?/¨"#
@@ -54,6 +54,10 @@ class NSAttribeautifulTests: XCTestCase {
         
         expected.addAttribute(.font, value: firstFont!, range: thirdRange)
         expected.addAttribute(.foregroundColor, value: firstColor!, range: thirdRange)
+        
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 21
+        expected.addAttribute(.paragraphStyle, value: style, range: expected.string.range())
         
         let document = NSAttribeautifulTests.documentWith(prefix: prefix, suffix: suffix)
         let instance = NSAttribeautiful(document: document, customPrefix: prefix, customSuffix: suffix)

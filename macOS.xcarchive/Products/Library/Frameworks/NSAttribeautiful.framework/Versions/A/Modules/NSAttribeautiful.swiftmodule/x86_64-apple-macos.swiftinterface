@@ -1,0 +1,33 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target x86_64-apple-macos10.13 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name NSAttribeautiful
+import Cocoa
+import Foundation
+@_exported import NSAttribeautiful
+import Swift
+extension NSAttribeautiful {
+  public static var debugLogLevel: DebugLogLevel
+}
+extension NSAttribeautiful {
+  public static func identifyAbbreviation(_ abbreviation: Swift.String, withFont font: Swift.String)
+}
+public enum DebugLogLevel : Swift.Int {
+  case none
+  case errors
+  case verbose
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+}
+public class NSAttribeautiful {
+  public init(document: Swift.String, customPrefix: Swift.Character? = nil, customSuffix: Swift.Character? = nil)
+  public func beautifiedDocument() throws -> Foundation.NSAttributedString
+  @objc deinit
+}
+extension NSAttributedString {
+}
+extension DebugLogLevel : Swift.Equatable {}
+extension DebugLogLevel : Swift.Hashable {}
+extension DebugLogLevel : Swift.RawRepresentable {}

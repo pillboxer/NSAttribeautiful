@@ -28,12 +28,18 @@ enum MatchingAction {
     case groupIndexMatch
     /// Matches extraneous whitespace at the end of a document
     case extraneousWhitespaceMatch
+    /// Matches explicit line space parameter
+    case lineSpaceMatch
+    /// Matches one or more digits
+    case oneOrMoreDigits
     
     /// The string literal pattern to hand to `NSRegularExpression`
     var pattern: String {
         switch self {
         case .groupContainerMatch:
             return RegexPattern.groupContainerPattern
+        case .lineSpaceMatch:
+            return RegexPattern.lineSpacingPattern
         case .groupsMatch:
             return RegexPattern.groupsPattern
         case .fontMatch:
@@ -50,6 +56,8 @@ enum MatchingAction {
             return RegexPattern.groupIndexPattern
         case .extraneousWhitespaceMatch:
             return RegexPattern.extraneousWhitespacePattern
+        case .oneOrMoreDigits:
+            return RegexPattern.oneOrMoreDigits
         }
     }
 }
@@ -58,7 +66,17 @@ fileprivate extension RegexPattern {
     
     /// The pattern for matching a group container
     static var groupContainerPattern: String {
-        #"^\#(prefixToken)(?:\[\w+:\d+\.?\d*:\w+\])+\#(suffixToken)"#
+        #"^\#(prefixToken)(?:\[\w+:\d+\.?\d*:\w+\])+(\#(lineSpacingPattern))?\#(suffixToken)"#
+    }
+    
+    /// The pattern for matching an optional line spacing argument within a container
+    static var lineSpacingPattern: String {
+        #"\[spacing:\d+\]"#
+    }
+    
+    /// The pattern for matching one or more digits within a string
+    static var oneOrMoreDigits: String {
+        #"\d+"#
     }
     
     /// The pattern for matching groups within a container

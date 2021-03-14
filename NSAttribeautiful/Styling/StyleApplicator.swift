@@ -6,14 +6,20 @@
 //
 
 import Foundation
+#if os(iOS)
+import UIKit
+#elseif os(macOS)
+import AppKit
+#endif
 
 /// This class performs the work of actually applying the formatting to a document. It also takes care of removing the `GroupContainer`, returning a stripped, formatted document.
 class StyleApplicator {
     
     /// The finalized instance of an `NSAttributedString`. No more manipulations are performed after this function returns
-    static func attributedString(from document: String, styles: [GroupStyle]) -> NSAttributedString {
+    static func attributedString(from document: String, styles: [GroupStyle], spacing: Int) -> NSAttributedString {
         let stripped = stripContainer(from: document)
-        let attributed = applyGroupStyles(styles, to: stripped)
+        let styled = applyGroupStyles(styles, to: stripped)
+        let attributed = applyLineSpacing(spacing, to: styled)
         DebugLogger.log(message: "Beautified String:\n\n\(attributed)", minimumLogLevel: .verbose)
         return attributed
     }
@@ -56,6 +62,16 @@ class StyleApplicator {
             }
         }
         return cleanupExtraneousElementsFrom(attributed, argumentCount: stylableArgumentMatches.count)
+        
+    }
+    
+    static func applyLineSpacing(_ spacing: Int, to attributed: NSAttributedString) -> NSAttributedString {
+        let mutable = NSMutableAttributedString(attributedString: attributed)
+        DebugLogger.log(message: "Applying line spacing of \(spacing)", minimumLogLevel: .verbose)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = CGFloat(spacing)
+        mutable.addAttribute(.paragraphStyle, value: paragraphStyle, range: mutable.string.range())
+        return mutable
     }
     
     static func retrieveGroupStyleIndex(from index: Int, in groupIndexString: String?) -> Int? {

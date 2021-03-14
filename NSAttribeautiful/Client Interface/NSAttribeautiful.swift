@@ -35,7 +35,7 @@ public class NSAttribeautiful {
             try checkTokenLegality()
             let container = try GroupContainerRetriever.groupContainerFor(document)
             let styles = container.groups.map { GroupStyle(group: $0) }
-            return StyleApplicator.attributedString(from: document, styles: styles)
+            return StyleApplicator.attributedString(from: document, styles: styles, spacing: container.lineSpacing)
         }
         catch let error {
             throw error

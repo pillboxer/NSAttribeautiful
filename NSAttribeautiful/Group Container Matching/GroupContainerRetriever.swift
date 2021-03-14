@@ -15,8 +15,9 @@ class GroupContainerRetriever {
     static func groupContainerFor(_ document: String) throws -> GroupContainer {
         do {
             let containerString = try container(in: document)
+            let spacing = parseLineSpacing(from: containerString)
             let groups = try parseGroups(from: containerString)
-            let container = GroupContainer(groups: groups)
+            let container = GroupContainer(groups: groups, lineSpacing: spacing)
             DebugLogger.log(message: "Retrieved container with groups:\n\n\(container.description)", minimumLogLevel: .verbose)
             return container
         }
@@ -34,6 +35,18 @@ class GroupContainerRetriever {
             throw NSAttribeautifulError.missingGroupContainer
         }
         return match
+    }
+    
+    /// Checks the group container for any custom line spacing, or else returns 0
+    private static func parseLineSpacing(from container: String) -> Int {
+        let lineSpacePattern = RegexPattern.patternFor(.lineSpaceMatch)
+        let spacingPattern = RegexPattern.patternFor(.oneOrMoreDigits)
+        guard let spacingMatch = RegexHelper.firstMatchFor(pattern: lineSpacePattern, in: container),
+              let digitMatch = RegexHelper.firstMatchFor(pattern: spacingPattern, in: spacingMatch),
+              let spacing = Int(digitMatch) else {
+            return 0
+        }
+        return spacing
     }
     
     /// Retrieves a number of `Group` items that will be applied to the document
@@ -57,6 +70,5 @@ class GroupContainerRetriever {
             groups.append(newGroup)
         }
         return groups
-        
     }
 }
