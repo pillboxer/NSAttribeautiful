@@ -5,23 +5,31 @@
 //  Created by Henry Cooper on 20/02/2021.
 //
 
+import SwiftUI
 #if os(iOS)
 import UIKit
-#else
+typealias FontType = UIFont
+#elseif os(macOS)
 import Cocoa
+typealias FontType = NSFont
 #endif
 
-class FontHelper {
+class StyleHelper {
     
     #if os(iOS)
     class func fontWith(name: String, size: CGFloat) -> UIFont? {
-        UIFont(name: name, size: size)
+        FontType(name: name, size: size)
     }
     #else
     class func fontWith(name: String, size: CGFloat) -> NSFont? {
-        NSFont(name: name, size: size)
+        FontType(name: name, size: size)
     }
     #endif
+    
+    @available(iOS 13.0, *)
+    class func font(_ font: FontType) -> Font {
+        Font.custom(font.fontName, size: font.pointSize)
+    }
     
     #if os(iOS)
     class func colorWith(name: String) -> UIColor? {
@@ -32,5 +40,6 @@ class FontHelper {
         NSColor(named: name)
     }
     #endif
-    
 }
+
+

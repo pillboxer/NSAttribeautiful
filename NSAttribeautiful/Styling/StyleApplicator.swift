@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 #if os(iOS)
 import UIKit
 #elseif os(macOS)
@@ -62,7 +63,33 @@ class StyleApplicator {
             }
         }
         return cleanupExtraneousElementsFrom(attributed, argumentCount: stylableArgumentMatches.count)
-        
+    }
+    
+    @available(OSX 10.15, *)
+    @available(iOS 13.0, *)
+    static func applyGroupStyles(_ styles: [GroupStyle], to strippedDocument: String) -> Text {
+        let stylableArgumentPattern = RegexPattern.patternFor(.stylableArgumentMatch)
+        let stylableArgumentMatches = RegexHelper.textCheckingResultsFor(pattern: stylableArgumentPattern, in: strippedDocument)
+        let groupIndexPattern = RegexPattern.patternFor(.groupIndexMatch)
+        let groupIndexMatch = RegexHelper.firstMatchFor(pattern: groupIndexPattern, in: strippedDocument)
+        var texts: [Text] = []
+        for match in stylableArgumentMatches.reversed() {
+            if let range = Range(match.range, in: strippedDocument),
+               let matchIndex = stylableArgumentMatches.firstIndex(of: match) {
+                let indexToUse = retrieveGroupStyleIndex(from: matchIndex, in: groupIndexMatch) ?? matchIndex
+                let style = styles[safe: indexToUse] ?? styles.last
+                let font = style?.font ?? .systemFont(ofSize: 12)
+                let color = style?.color ?? .black
+                let string = String(strippedDocument[range])
+                let newTextInstance = Text(string)
+                    .foregroundColor(Color(color))
+                    .font(StyleHelper.font(font))
+                texts.append(newTextInstance)
+            }
+        }
+        var currentInstance = Text("")
+        texts.forEach { currentInstance = currentInstance + Text($0) }
+        }
     }
     
     static func applyLineSpacing(_ spacing: Int, to attributed: NSAttributedString) -> NSAttributedString {
