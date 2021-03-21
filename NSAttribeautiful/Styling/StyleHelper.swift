@@ -26,6 +26,7 @@ class StyleHelper {
     }
     #endif
     
+    @available(OSX 10.15, *)
     @available(iOS 13.0, *)
     class func font(_ font: FontType) -> Font {
         Font.custom(font.fontName, size: font.pointSize)

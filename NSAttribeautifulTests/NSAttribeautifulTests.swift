@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import SwiftUI
 @testable import NSAttribeautiful
 
 class NSAttribeautifulTests: XCTestCase {
@@ -24,23 +25,20 @@ class NSAttribeautifulTests: XCTestCase {
         
         let prefix = customTokens.randomElement()!
         let suffix = customTokenNotIncluding(prefix)
-        
-        print(prefix)
-        print(suffix)
-        
+ 
         NSAttribeautiful.identifyAbbreviation("bod", withFont: "BodoniSvtyTwoITCTT-Book")
         NSAttribeautiful.identifyAbbreviation("al", withFont: "Avenir-Light")
         NSAttribeautiful.identifyAbbreviation("cp", withFont: "Copperplate")
         
         let expected = NSMutableAttributedString(string: "This should not be affected but this, that and this should.")
         
-        let firstFont = FontHelper.fontWith(name: "BodoniSvtyTwoITCTT-Book", size: 123)
-        let secondFont = FontHelper.fontWith(name: "Avenir-Light", size: 12.3)
-        let thirdFont = FontHelper.fontWith(name: "Copperplate", size: 0.5)
+        let firstFont = StyleHelper.fontWith(name: "BodoniSvtyTwoITCTT-Book", size: 123)
+        let secondFont = StyleHelper.fontWith(name: "Avenir-Light", size: 12.3)
+        let thirdFont = StyleHelper.fontWith(name: "Copperplate", size: 0.5)
         
-        let firstColor = FontHelper.colorWith(name: "green")
-        let secondColor = FontHelper.colorWith(name: "blue")
-        let thirdColor = FontHelper.colorWith(name: "red")
+        let firstColor = StyleHelper.colorWith(name: "green")
+        let secondColor = StyleHelper.colorWith(name: "blue")
+        let thirdColor = StyleHelper.colorWith(name: "red")
         
         let firstRange = NSRange(location: 32, length: 4)
         let secondRange = NSRange(location: 38, length: 4)
