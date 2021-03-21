@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 public class NSAttribeautiful {
     
@@ -40,6 +41,17 @@ public class NSAttribeautiful {
         catch let error {
             throw error
         }
+    }
+    
+    /// Allows use of beautified strings in SwiftUI
+    /// - Returns: A correctly formatted `NSAttribeautifulLabelRepresentable`instance or `nil` if the document could not be beautified
+    @available(iOS 13.0, *)
+    @available(OSX 10.15, *)
+    public func representable(alignment: NSTextAlignment = .natural) -> NSAttribeautifulLabelRepresentable? {
+        if let beautified = try? beautifiedDocument() {
+            return NSAttribeautifulLabelRepresentable(beautifiedDocument: beautified, alignment: alignment)
+        }
+        return nil
     }
     
     private func checkTokenLegality() throws {

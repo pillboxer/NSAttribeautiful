@@ -26,6 +26,7 @@
 		86300E3125C7117600BF0893 /* NSAttribeautifulTests+GroupContainerMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E2E25C7117600BF0893 /* NSAttribeautifulTests+GroupContainerMatching.swift */; };
 		86300E3225C7117600BF0893 /* NSAttribeautifulTests+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E2F25C7117600BF0893 /* NSAttribeautifulTests+Regex.swift */; };
 		86300E3D25C713E900BF0893 /* NSAttribeautifulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86300E3C25C713E800BF0893 /* NSAttribeautifulTests.swift */; };
+		8631468226078F6300F7F051 /* NSAttribeautifulLabelRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631468126078F6300F7F051 /* NSAttribeautifulLabelRepresentable.swift */; };
 		863BA90B25D7CA9500C12693 /* StyleApplicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BA90A25D7CA9500C12693 /* StyleApplicator.swift */; };
 		863BA91125D7CED100C12693 /* NSAttribeautifulTests+StyleApplicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BA91025D7CED100C12693 /* NSAttribeautifulTests+StyleApplicator.swift */; };
 		863BA92125D9244000C12693 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863BA92025D9244000C12693 /* Array+Extensions.swift */; };
@@ -36,7 +37,7 @@
 		8658CEE325D1CF020048F840 /* NSAttribeautifulTests+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CEE225D1CF020048F840 /* NSAttribeautifulTests+Font.swift */; };
 		8658CEE925D1D0880048F840 /* GroupStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8658CEE825D1D0880048F840 /* GroupStyle.swift */; };
 		865DE89925EA39DA00576613 /* GroupIndexContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865DE89825EA39DA00576613 /* GroupIndexContainer.swift */; };
-		8664997425E14BC40094CBF5 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8664997325E14BC40094CBF5 /* FontHelper.swift */; };
+		8664997425E14BC40094CBF5 /* StyleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8664997325E14BC40094CBF5 /* StyleHelper.swift */; };
 		8664997725E14FAF0094CBF5 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8664996725E14A620094CBF5 /* UIColor+Extensions.swift */; platformFilter = ios; };
 		8664998025E150470094CBF5 /* NSColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8664996B25E14ACA0094CBF5 /* NSColor+Extensions.swift */; };
 		86C84E2925D9389300FECCF7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86C84E2825D9389300FECCF7 /* Colors.xcassets */; };
@@ -76,6 +77,7 @@
 		86300E2E25C7117600BF0893 /* NSAttribeautifulTests+GroupContainerMatching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+GroupContainerMatching.swift"; sourceTree = "<group>"; };
 		86300E2F25C7117600BF0893 /* NSAttribeautifulTests+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+Regex.swift"; sourceTree = "<group>"; };
 		86300E3C25C713E800BF0893 /* NSAttribeautifulTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSAttribeautifulTests.swift; sourceTree = "<group>"; };
+		8631468126078F6300F7F051 /* NSAttribeautifulLabelRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttribeautifulLabelRepresentable.swift; sourceTree = "<group>"; };
 		863BA90A25D7CA9500C12693 /* StyleApplicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleApplicator.swift; sourceTree = "<group>"; };
 		863BA91025D7CED100C12693 /* NSAttribeautifulTests+StyleApplicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttribeautifulTests+StyleApplicator.swift"; sourceTree = "<group>"; };
 		863BA92025D9244000C12693 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 		865DE89825EA39DA00576613 /* GroupIndexContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupIndexContainer.swift; sourceTree = "<group>"; };
 		8664996725E14A620094CBF5 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		8664996B25E14ACA0094CBF5 /* NSColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+Extensions.swift"; sourceTree = "<group>"; };
-		8664997325E14BC40094CBF5 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		8664997325E14BC40094CBF5 /* StyleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleHelper.swift; sourceTree = "<group>"; };
 		86C84E2825D9389300FECCF7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		86DF10A025D5C14F0086D40A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/iOSSupport/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -217,6 +219,7 @@
 				86553A5725E12011004F0AE4 /* NSAttribeautiful+ViewController.swift */,
 				862235A425D9349300A5A57D /* NSAttribeautifulViewController.swift */,
 				862235A525D9349300A5A57D /* NSAttribeautifulViewController.xib */,
+				8631468126078F6300F7F051 /* NSAttribeautifulLabelRepresentable.swift */,
 			);
 			path = "Client Interface";
 			sourceTree = "<group>";
@@ -243,7 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				863BA90A25D7CA9500C12693 /* StyleApplicator.swift */,
-				8664997325E14BC40094CBF5 /* FontHelper.swift */,
+				8664997325E14BC40094CBF5 /* StyleHelper.swift */,
 			);
 			path = Styling;
 			sourceTree = "<group>";
@@ -411,11 +414,12 @@
 				86300E1D25C7115C00BF0893 /* DebugLogger.swift in Sources */,
 				86300E2325C7115C00BF0893 /* NSAttribeautiful+Debug.swift in Sources */,
 				86300E2725C7115C00BF0893 /* RegexPattern.swift in Sources */,
+				8631468226078F6300F7F051 /* NSAttribeautifulLabelRepresentable.swift in Sources */,
 				8658CED525D1CC8F0048F840 /* NSAttribeautiful+Font.swift in Sources */,
 				86300E1E25C7115C00BF0893 /* DebugLogLevel.swift in Sources */,
 				86300E2025C7115C00BF0893 /* NSAttribeautifulError.swift in Sources */,
 				86300E2225C7115C00BF0893 /* NSAttribeautiful.swift in Sources */,
-				8664997425E14BC40094CBF5 /* FontHelper.swift in Sources */,
+				8664997425E14BC40094CBF5 /* StyleHelper.swift in Sources */,
 				86300E1F25C7115C00BF0893 /* NSAttribeautiful+ErrorDescriptions.swift in Sources */,
 				862235A625D9349300A5A57D /* NSAttribeautifulViewController.swift in Sources */,
 				863BA90B25D7CA9500C12693 /* StyleApplicator.swift in Sources */,

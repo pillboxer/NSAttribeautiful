@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 #if os(iOS)
 import UIKit
 #elseif os(macOS)
@@ -62,7 +63,6 @@ class StyleApplicator {
             }
         }
         return cleanupExtraneousElementsFrom(attributed, argumentCount: stylableArgumentMatches.count)
-        
     }
     
     static func applyLineSpacing(_ spacing: Int, to attributed: NSAttributedString) -> NSAttributedString {

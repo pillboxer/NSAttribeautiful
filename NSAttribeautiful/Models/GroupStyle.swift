@@ -44,7 +44,7 @@ struct GroupStyle {
             return nil
         }
         let fontSize = CGFloat(size)
-        return FontHelper.fontWith(name: fontName, size: fontSize)
+        return StyleHelper.fontWith(name: fontName, size: fontSize)
     }
     #else
     var font: NSFont? {
@@ -52,7 +52,7 @@ struct GroupStyle {
             return nil
         }
         let fontSize = CGFloat(size)
-        return FontHelper.fontWith(name: fontName, size: fontSize)
+        return StyleHelper.fontWith(name: fontName, size: fontSize)
     }
     #endif
     
