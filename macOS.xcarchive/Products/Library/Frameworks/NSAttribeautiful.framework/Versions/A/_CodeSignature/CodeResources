@@ -6,11 +6,11 @@
 	<dict>
 		<key>Resources/Assets.car</key>
 		<data>
-		yRuI/LN2EfX1+MYy7mqKbfFWDr0=
+		jiBm+nN7vKTrEK2tdtCIt1veDqY=
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		J0plgtf3aKrXwlLyDSqQ290uWvQ=
+		Z0oKkMT88b6XPEYbKAbsWcbG3jk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -33,84 +33,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			j92vm4nRlHtTwV8AIfvN6ViHg5/F0gF7rFKEu/y5gFY=
+			xFoS9oXN3YlXwXqf7TNrO44D2C3mtgz0FVlvgccWnr0=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/arm64-apple-macos.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			beF0LuBf0Uy/pE0t+QJtWBDx6QjrDanLw6XjQlU9m9g=
+			w2FvYR6jjAokdC+Y5i4vaWpALJ16jiumFJLfqtEi4bc=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/arm64-apple-macos.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r6pcTQXCBaLveMZgJZatmstkLgTaM0TJCuSEiHJNs5c=
+			9O4wu76xXslD2oUvI2xmY1IulKcuKWMy6P6QDZWjI2w=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			j92vm4nRlHtTwV8AIfvN6ViHg5/F0gF7rFKEu/y5gFY=
+			xFoS9oXN3YlXwXqf7TNrO44D2C3mtgz0FVlvgccWnr0=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			beF0LuBf0Uy/pE0t+QJtWBDx6QjrDanLw6XjQlU9m9g=
+			w2FvYR6jjAokdC+Y5i4vaWpALJ16jiumFJLfqtEi4bc=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r6pcTQXCBaLveMZgJZatmstkLgTaM0TJCuSEiHJNs5c=
+			9O4wu76xXslD2oUvI2xmY1IulKcuKWMy6P6QDZWjI2w=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/x86_64-apple-macos.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			paHCZWY4oeJ0sQxUNW++TEZEaF6u5HoRTqJoQv16WzE=
+			Wm7+etfPNm4dkVCbfT/8bGDW6tf1V7AE9XhG0ypFxT8=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/x86_64-apple-macos.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qE3VbcMZ6Ujap/gIwPdhvtHbWk4ObGrA+AJ6D3eDpYE=
+			i1yQUKs6nBQzqTbIbQxcSARdaCnrlPBaSChU9w604Oo=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/x86_64-apple-macos.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TVK1GIBkkLyqv7kSrZM/woExFYnJBeg6c7chqQprGEc=
+			dCv86U5dtGiia8Dvf3sryBBKjxGBqmb76ANUjusLjYk=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			paHCZWY4oeJ0sQxUNW++TEZEaF6u5HoRTqJoQv16WzE=
+			Wm7+etfPNm4dkVCbfT/8bGDW6tf1V7AE9XhG0ypFxT8=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qE3VbcMZ6Ujap/gIwPdhvtHbWk4ObGrA+AJ6D3eDpYE=
+			i1yQUKs6nBQzqTbIbQxcSARdaCnrlPBaSChU9w604Oo=
 			</data>
 		</dict>
 		<key>Modules/NSAttribeautiful.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TVK1GIBkkLyqv7kSrZM/woExFYnJBeg6c7chqQprGEc=
+			dCv86U5dtGiia8Dvf3sryBBKjxGBqmb76ANUjusLjYk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -124,14 +124,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lvla8mva9NgFemX9M0k7M4NEuT9Qj/E8NAABkUaVO1I=
+			5eUkrndANMSEftVK3/jbtR8p6Zn0PWfXccuCcdawX6M=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SyR2a7dyO7JO2jp3wjTaX1KsruQnPuI2Cil17lBBaio=
+			PddeD3ATwVV4jR8EPXttbxNO6TA52B3TJesgioy63tU=
 			</data>
 		</dict>
 	</dict>

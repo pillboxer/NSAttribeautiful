@@ -12,6 +12,15 @@ extension NSAttribeautiful {
 extension NSAttribeautiful {
   public static var debugLogLevel: DebugLogLevel
 }
+@available(iOS 13.0.0, *)
+public struct NSAttribeautifulLabelRepresentable : SwiftUI.UIViewRepresentable {
+  public func makeUIView(context: NSAttribeautifulLabelRepresentable.Context) -> some UIKit.UIView
+  
+  public func updateUIView(_ uiView: @_opaqueReturnTypeOf("$s16NSAttribeautiful0A18LabelRepresentableV10makeUIView7contextQr7SwiftUI0eC7ContextVyACG_tF", 0) 🦸, context: NSAttribeautifulLabelRepresentable.Context)
+  public typealias UIViewType = @_opaqueReturnTypeOf("$s16NSAttribeautiful0A18LabelRepresentableV10makeUIView7contextQr7SwiftUI0eC7ContextVyACG_tF", 0) 🦸
+  public typealias Coordinator = Swift.Void
+  public typealias Body = Swift.Never
+}
 extension NSAttribeautiful {
   public static func identifyAbbreviation(_ abbreviation: Swift.String, withFont font: Swift.String)
 }
@@ -28,6 +37,8 @@ public enum DebugLogLevel : Swift.Int {
 public class NSAttribeautiful {
   public init(document: Swift.String, customPrefix: Swift.Character? = nil, customSuffix: Swift.Character? = nil)
   public func beautifiedDocument() throws -> Foundation.NSAttributedString
+  @available(iOS 13.0, OSX 10.15, *)
+  public func representable(alignment: UIKit.NSTextAlignment = .natural) -> NSAttribeautifulLabelRepresentable?
   @objc deinit
 }
 extension NSAttributedString {
